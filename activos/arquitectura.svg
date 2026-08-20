@@ -3,19 +3,19 @@
 
   <defs>
     <linearGradient id="lienzo" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="440">
-      <stop offset="0" stop-color="#08090D"/>
-      <stop offset="1" stop-color="#13161E"/>
+      <stop offset="0" stop-color="#0A0F14"/>
+      <stop offset="1" stop-color="#1A1410"/>
     </linearGradient>
 
     <linearGradient id="oro" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="0">
-      <stop offset="0"    stop-color="#8C6F2A"/>
-      <stop offset="0.5"  stop-color="#C9A227"/>
-      <stop offset="1"    stop-color="#8C6F2A"/>
+      <stop offset="0"    stop-color="#8A5A2B"/>
+      <stop offset="0.5"  stop-color="#E8A44C"/>
+      <stop offset="1"    stop-color="#8A5A2B"/>
     </linearGradient>
 
     <marker id="punta" viewBox="0 0 10 10" refX="9" refY="5"
             markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0L10 5L0 10z" fill="#C9A227" fill-opacity="0.7"/>
+      <path d="M0 0L10 5L0 10z" fill="#E8A44C" fill-opacity="0.7"/>
     </marker>
   </defs>
 
@@ -23,80 +23,80 @@
 
   <g font-family="'Segoe UI', -apple-system, Arial, sans-serif">
 
-    <text x="64" y="52" font-size="11.5" fill="#8C7A46" letter-spacing="3.6">CAUCE V3 · DE UN PEDIDO A TRABAJO VERIFICABLE</text>
-    <path d="M64 68H1216" stroke="#C9A227" stroke-opacity="0.18" stroke-width="1"/>
+    <text x="64" y="52" font-size="11.5" fill="#A8823F" letter-spacing="3.6">CAUCE V3 · DE UN PEDIDO A TRABAJO VERIFICABLE</text>
+    <path d="M64 68H1216" stroke="#E8A44C" stroke-opacity="0.18" stroke-width="1"/>
 
     <!-- ── 1. Pedido ─────────────────────────────────────────────── -->
     <g>
-      <rect x="64" y="150" width="150" height="76" rx="6" fill="none" stroke="#4A5060" stroke-width="1.2"/>
-      <text x="139" y="184" font-size="14.5" fill="#CFCBBF" text-anchor="middle">Pedido</text>
-      <text x="139" y="204" font-size="11.5" fill="#6E7280" text-anchor="middle">canal / chat</text>
+      <rect x="64" y="150" width="150" height="76" rx="6" fill="none" stroke="#5A4A3C" stroke-width="1.2"/>
+      <text x="139" y="184" font-size="14.5" fill="#E4D5BC" text-anchor="middle">Pedido</text>
+      <text x="139" y="204" font-size="11.5" fill="#7D7062" text-anchor="middle">canal / chat</text>
     </g>
-    <path d="M222 188H272" stroke="#C9A227" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
+    <path d="M222 188H272" stroke="#E8A44C" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
 
     <!-- ── 2. Control plane ──────────────────────────────────────── -->
     <g>
-      <rect x="280" y="118" width="196" height="140" rx="6" fill="#0C0E14" stroke="url(#oro)" stroke-width="1.6"/>
-      <text x="378" y="150" font-size="15" fill="#E8D9A0" text-anchor="middle" font-weight="600">Control plane</text>
-      <path d="M304 164H452" stroke="#C9A227" stroke-opacity="0.22"/>
-      <text x="304" y="188" font-size="12" fill="#9BA3AF">Routing durable</text>
-      <text x="304" y="210" font-size="12" fill="#9BA3AF">Reservas que vencen</text>
-      <text x="304" y="232" font-size="12" fill="#9BA3AF">Cartas muertas</text>
+      <rect x="280" y="118" width="196" height="140" rx="6" fill="#120D0A" stroke="url(#oro)" stroke-width="1.6"/>
+      <text x="378" y="150" font-size="15" fill="#F2D9AE" text-anchor="middle" font-weight="600">Control plane</text>
+      <path d="M304 164H452" stroke="#E8A44C" stroke-opacity="0.22"/>
+      <text x="304" y="188" font-size="12" fill="#998C7C">Routing durable</text>
+      <text x="304" y="210" font-size="12" fill="#998C7C">Reservas que vencen</text>
+      <text x="304" y="232" font-size="12" fill="#998C7C">Cartas muertas</text>
     </g>
-    <path d="M484 188H534" stroke="#C9A227" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
+    <path d="M484 188H534" stroke="#E8A44C" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
 
     <!-- ── 3. De 2 a N equipos ───────────────────────────────────── -->
     <g>
-      <text x="628" y="106" font-size="11.5" fill="#8C7A46" letter-spacing="2.2" text-anchor="middle">DE 2 A N EQUIPOS</text>
-      <g fill="none" stroke="#C9A227" stroke-opacity="0.45" stroke-width="1.2">
+      <text x="628" y="106" font-size="11.5" fill="#A8823F" letter-spacing="2.2" text-anchor="middle">DE 2 A N EQUIPOS</text>
+      <g fill="none" stroke="#E8A44C" stroke-opacity="0.45" stroke-width="1.2">
         <rect x="542" y="122" width="172" height="40" rx="5"/>
         <rect x="542" y="170" width="172" height="40" rx="5"/>
         <rect x="542" y="218" width="172" height="40" rx="5"/>
       </g>
-      <g font-size="12" fill="#CFCBBF">
+      <g font-size="12" fill="#E4D5BC">
         <text x="558" y="147">Equipo · producto</text>
         <text x="558" y="195">Equipo · ingeniería</text>
         <text x="558" y="243">Equipo · revisión</text>
       </g>
-      <text x="628" y="282" font-size="11" fill="#6E7280" text-anchor="middle">agentes puramente reactivos · con tiempo límite</text>
+      <text x="628" y="282" font-size="11" fill="#7D7062" text-anchor="middle">agentes puramente reactivos · con tiempo límite</text>
     </g>
-    <path d="M722 188H772" stroke="#C9A227" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
+    <path d="M722 188H772" stroke="#E8A44C" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
 
     <!-- ── 4. Multi-harness ──────────────────────────────────────── -->
     <g>
-      <rect x="780" y="118" width="196" height="140" rx="6" fill="#0C0E14" stroke="url(#oro)" stroke-width="1.6"/>
-      <text x="878" y="150" font-size="15" fill="#E8D9A0" text-anchor="middle" font-weight="600">Multi-harness</text>
-      <path d="M804 164H952" stroke="#C9A227" stroke-opacity="0.22"/>
-      <text x="878" y="190" font-size="12.5" fill="#CFCBBF" text-anchor="middle">Cuatro motores</text>
-      <text x="878" y="212" font-size="12.5" fill="#CFCBBF" text-anchor="middle">un solo contrato</text>
-      <g fill="#C9A227" fill-opacity="0.75">
+      <rect x="780" y="118" width="196" height="140" rx="6" fill="#120D0A" stroke="url(#oro)" stroke-width="1.6"/>
+      <text x="878" y="150" font-size="15" fill="#F2D9AE" text-anchor="middle" font-weight="600">Multi-harness</text>
+      <path d="M804 164H952" stroke="#E8A44C" stroke-opacity="0.22"/>
+      <text x="878" y="190" font-size="12.5" fill="#E4D5BC" text-anchor="middle">Cuatro motores</text>
+      <text x="878" y="212" font-size="12.5" fill="#E4D5BC" text-anchor="middle">un solo contrato</text>
+      <g fill="#E8A44C" fill-opacity="0.75">
         <rect x="820" y="230" width="24" height="6" rx="3"/>
         <rect x="852" y="230" width="24" height="6" rx="3"/>
         <rect x="884" y="230" width="24" height="6" rx="3"/>
         <rect x="916" y="230" width="24" height="6" rx="3"/>
       </g>
     </g>
-    <path d="M984 188H1034" stroke="#C9A227" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
+    <path d="M984 188H1034" stroke="#E8A44C" stroke-opacity="0.55" stroke-width="1.3" marker-end="url(#punta)"/>
 
     <!-- ── 5. Artefacto ──────────────────────────────────────────── -->
     <g>
-      <rect x="1042" y="150" width="174" height="76" rx="6" fill="none" stroke="#4A5060" stroke-width="1.2"/>
-      <text x="1129" y="180" font-size="14.5" fill="#CFCBBF" text-anchor="middle">Artefacto</text>
-      <text x="1129" y="202" font-size="11.5" fill="#6E7280" text-anchor="middle">verificado · tipado</text>
+      <rect x="1042" y="150" width="174" height="76" rx="6" fill="none" stroke="#3FBF87" stroke-opacity="0.65" stroke-width="1.4"/>
+      <text x="1129" y="180" font-size="14.5" fill="#E4D5BC" text-anchor="middle">Artefacto</text>
+      <text x="1129" y="202" font-size="11.5" fill="#3FBF87" fill-opacity="0.8" text-anchor="middle">verificado · tipado</text>
     </g>
 
     <!-- ── Franja inferior: lo que no delega la máquina ───────────── -->
     <g>
-      <path d="M64 340H1216" stroke="#C9A227" stroke-opacity="0.18" stroke-width="1"/>
-      <text x="64" y="374" font-size="11.5" fill="#8C7A46" letter-spacing="3.2">GATES HUMANOS · EL SISTEMA NO DECIDE POR VOS</text>
-      <g font-size="12.5" fill="#9BA3AF">
+      <path d="M64 340H1216" stroke="#E8A44C" stroke-opacity="0.18" stroke-width="1"/>
+      <text x="64" y="374" font-size="11.5" fill="#C4442F" letter-spacing="3.2">GATES HUMANOS · EL SISTEMA NO DECIDE POR VOS</text>
+      <g font-size="12.5" fill="#998C7C">
         <text x="64"   y="404">Despliegue a producción</text>
         <text x="330"  y="404">Acceso a secretos</text>
         <text x="560"  y="404">Borrado de datos</text>
         <text x="790"  y="404">Gasto</text>
         <text x="940"  y="404">Aislamiento por cliente, en el almacenamiento</text>
       </g>
-      <g fill="#C9A227" fill-opacity="0.8">
+      <g fill="#C4442F" fill-opacity="0.85">
         <circle cx="52" cy="400" r="2.6"/>
         <circle cx="318" cy="400" r="2.6"/>
         <circle cx="548" cy="400" r="2.6"/>

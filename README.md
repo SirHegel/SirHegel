@@ -1,8 +1,8 @@
-<img src="activos/cabecera-plano.svg" alt="SirHegel — economía, sistemas de agentes, filosofía" width="100%">
+<img src="activos/cabecera-horizonte.svg" alt="SirHegel — economía, sistemas de agentes, filosofía" width="100%">
 
 <br>
 
-Economista y analista de datos. Construyo, junto a **[Steven Vallejo Ortiz](https://www.humanizar.tech/)**,
+Economista y analista de datos. Construyo, junto a **[Steven Vallejo Ortiz](https://www.stevenvallejo.com/es)**,
 el sistema que convierte agentes de inteligencia artificial dispersos en una empresa
 que opera.
 

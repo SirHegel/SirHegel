@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 468" width="1280" height="468" role="img" aria-label="SirHegel — economía, sistemas de agentes, filosofía">
+  <title>SirHegel</title>
+
+  <!--
+    Composicion: rejilla suiza (Muller-Brockmann) sobre paleta de Robby Muller
+    en Paris, Texas. La estructura da el rigor; el color, la temperatura.
+
+    Los postes sobre la linea del horizonte se leen dos veces: como el plano de
+    control que gobierna N equipos, y como los postes de telegrafo que se
+    pierden en el desierto. Es la misma figura dicha en dos lenguajes.
+  -->
+
+  <defs>
+    <linearGradient id="cielo" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="304">
+      <stop offset="0"    stop-color="#0A1622"/>
+      <stop offset="0.42" stop-color="#173449"/>
+      <stop offset="0.78" stop-color="#3D5468"/>
+      <stop offset="1"    stop-color="#8A6440"/>
+    </linearGradient>
+
+    <linearGradient id="tierra" gradientUnits="userSpaceOnUse" x1="0" y1="304" x2="0" y2="468">
+      <stop offset="0" stop-color="#2A1C14"/>
+      <stop offset="1" stop-color="#120C0A"/>
+    </linearGradient>
+
+    <radialGradient id="sol" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#F0A14B" stop-opacity="0.72"/>
+      <stop offset="0.4" stop-color="#C4562C" stop-opacity="0.30"/>
+      <stop offset="1"   stop-color="#C4562C" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="crema" gradientUnits="userSpaceOnUse" x1="96" y1="120" x2="700" y2="210">
+      <stop offset="0" stop-color="#F5EDDF"/>
+      <stop offset="1" stop-color="#D9C8AE"/>
+    </linearGradient>
+
+    <linearGradient id="filete" gradientUnits="userSpaceOnUse" x1="96" y1="0" x2="600" y2="0">
+      <stop offset="0"   stop-color="#C4442F"/>
+      <stop offset="0.6" stop-color="#A8382A" stop-opacity="0.55"/>
+      <stop offset="1"   stop-color="#A8382A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cielo, tierra y el sol bajo -->
+  <rect width="1280" height="304" fill="url(#cielo)"/>
+  <rect y="304" width="1280" height="164" fill="url(#tierra)"/>
+  <ellipse cx="1015" cy="304" rx="300" ry="150" fill="url(#sol)"/>
+
+  <!-- Rejilla de 12 columnas: la estructura queda visible, muy tenue. -->
+  <g stroke="#F5EDDF" stroke-opacity="0.045" stroke-width="1">
+    <path d="M96 0V468M192 0V468M288 0V468M384 0V468M480 0V468M576 0V468M672 0V468M768 0V468M864 0V468M960 0V468M1056 0V468M1152 0V468"/>
+  </g>
+
+  <!-- Linea del horizonte -->
+  <path d="M0 304H1280" stroke="#E8A44C" stroke-opacity="0.42" stroke-width="1"/>
+
+  <!-- ── Postes sobre el horizonte ────────────────────────────────────── -->
+  <g>
+    <path d="M742 304V254M838 304V240M934 304V248M1030 304V230M1126 304V252" 
+          stroke="#0A0F14" stroke-opacity="0.75" stroke-width="2.2"/>
+    <path d="M742 254L1126 252" stroke="#3FBF87" stroke-opacity="0.5" stroke-width="1.1"/>
+
+    <g fill="#3FBF87">
+      <circle cx="742"  cy="254" r="2.8"/>
+      <circle cx="838"  cy="240" r="2.8"/>
+      <circle cx="934"  cy="248" r="2.8"/>
+      <circle cx="1030" cy="230" r="2.8"/>
+      <circle cx="1126" cy="252" r="2.8"/>
+    </g>
+    <g fill="#3FBF87" fill-opacity="0.18">
+      <circle cx="742"  cy="254" r="8"/>
+      <circle cx="838"  cy="240" r="8"/>
+      <circle cx="934"  cy="248" r="8"/>
+      <circle cx="1030" cy="230" r="8"/>
+      <circle cx="1126" cy="252" r="8"/>
+    </g>
+
+    <g font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="9.5"
+       fill="#3FBF87" fill-opacity="0.6" letter-spacing="2.6">
+      <text x="742" y="212">CONTROL PLANE · N EQUIPOS</text>
+    </g>
+  </g>
+
+  <!-- ── Tipografia, alineada a la columna 1 ──────────────────────────── -->
+  <g font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif">
+    <text x="96" y="182" font-size="88" font-weight="700" fill="url(#crema)" letter-spacing="-2.4">SirHegel</text>
+  </g>
+
+  <path d="M96 212H600" stroke="url(#filete)" stroke-width="2"/>
+
+  <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <text x="96" y="246" font-size="12" fill="#E8A44C" letter-spacing="4.6">
+      ECONOMÍA · SISTEMAS DE AGENTES · FILOSOFÍA
+    </text>
+  </g>
+
+  <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <text x="96" y="362" font-size="17" fill="#E4D5BC" letter-spacing="0.1">
+      Construyo el plano que convierte agentes dispersos en una empresa operable.
+    </text>
+    <text x="96" y="390" font-size="17" fill="#998C7C" letter-spacing="0.1">
+      Materialismo filosófico, crítica de la economía política, lógica hegeliana.
+    </text>
+  </g>
+
+  <g font-family="Georgia, 'Times New Roman', serif" font-style="italic">
+    <text x="96" y="428" font-size="13.5" fill="#7D7062">
+      Un agente no es una empresa. La diferencia es categorial, no cuantitativa.
+    </text>
+  </g>
+</svg>
