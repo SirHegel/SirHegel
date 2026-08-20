@@ -15,3 +15,8 @@
 Thumbs.db
 *.swp
 *.tmp
+
+# ── Convención de versionado de activos ──
+# GitHub cachea las imágenes por URL y no invalida al cambiar el contenido.
+# Cada rediseño de un activo debe subir su sufijo (-v2, -v3, ...) para forzar
+# una URL nueva. Sin eso, los visitantes siguen viendo la versión anterior.

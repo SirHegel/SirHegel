@@ -1,4 +1,4 @@
-<img src="activos/panel.svg" alt="Jhon Alvarez — economics, agent systems, philosophy" width="100%">
+<img src="activos/panel-v2.svg" alt="Jhon Alvarez — economics, agent systems, philosophy" width="100%">
 
 <p align="center">
   <a href="https://www.linkedin.com/in/jhon-alvarez-446257282/"><b>LinkedIn</b></a>
@@ -50,7 +50,7 @@ CAUCE V3 begins by denying that premise. It does not orchestrate agents that alr
 exist — **it produces the teams** and imposes the form that makes them accountable.
 From two to N specialized teams, governed from a single control plane.
 
-<img src="activos/arquitectura.svg" alt="CAUCE V3 architecture" width="100%">
+<img src="activos/arquitectura-v2.svg" alt="CAUCE V3 architecture" width="100%">
 
 | | |
 |---|---|
