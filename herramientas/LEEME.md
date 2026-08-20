@@ -47,3 +47,32 @@ Las reglas se contradicen entre proyectos y hay que leerlas una por una:
 
 El clasificador exige frases inequívocas. Un `(not )?` opcional en el patrón hacía que
 «LLM contributions are **not banned**» de Rust se leyera como prohibición.
+
+## `issue-libre.sh`
+
+Comprueba si un issue está realmente libre **antes** de empezar a trabajarlo.
+
+```console
+$ ./issue-libre.sh pytest-dev/pytest 14819
+OCUPADO  pytest-dev/pytest#14819  (open, autor RonnyPfannschmidt, asignado a nadie)
+  PR enlazados por GitHub:
+  #14822 RonnyPfannschmidt 2026-07-31 fix(rewrite): short-circuit chained comparisons
+```
+
+### Por qué existe
+
+Cinco pull requests seguidos duplicaron trabajo que ya estaba abierto. El filtro que se
+usaba —«sin asignar y sin comentarios»— no detecta nada, porque un mantenedor que abre un
+issue y lo arregla él mismo no se autoasigna ni se comenta. Todos los casos que fallaron
+tenían cero comentarios y ningún asignado, y un PR abierto encima.
+
+### Qué mira
+
+1. **Referencias cruzadas del timeline** — los PR que GitHub ya enlazó al issue. Es la
+   señal fiable, y la que faltaba.
+2. **Búsqueda por número** — PR abiertos que lo mencionan en el texto.
+3. **PR abiertos del autor del issue** — quien reporta suele arreglar.
+
+Un `OCUPADO` no siempre significa duplicado: en `scipy#25955` el PR enlazado era del mismo
+autor pero sobre otro archivo y otro bug. Por eso imprime los candidatos en vez de decidir
+solo: hay que abrir y comparar.
