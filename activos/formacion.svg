@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320"
+     role="img" aria-label="Training and practice: economist, software analysis and development technologist">
+  <title>Training and practice</title>
+
+  <!--
+    TARJETA DE CREDENCIALES
+
+    Tres cajas de igual peso sobre la misma placa. La jerarquia no la marca el
+    tamano de la caja sino la escala tipografica: micro 12 para la etiqueta,
+    subtitulo 21 para el titulo, cuerpo 15 para el detalle.
+
+    La animacion vive solo en el filete superior y en los puntos de estado, es
+    decir, fuera de la columna de texto.
+  -->
+
+  <defs>
+    <linearGradient id="placa" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="320">
+      <stop offset="0"   stop-color="#080B11"/>
+      <stop offset="0.6" stop-color="#0D1119"/>
+      <stop offset="1"   stop-color="#140F0C"/>
+    </linearGradient>
+
+    <linearGradient id="cinta" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="0">
+      <stop offset="0"    stop-color="#D4402C" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#D4402C"/>
+      <stop offset="0.42" stop-color="#E8A44C"/>
+      <stop offset="0.66" stop-color="#3FBF87"/>
+      <stop offset="1"    stop-color="#3FBF87" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="-1280 0; 1280 0" dur="12s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <filter id="pt" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="320" rx="4" fill="url(#placa)"/>
+  <rect width="1280" height="3" fill="url(#cinta)"/>
+
+  <g stroke="#FCF8F0" stroke-opacity="0.05" stroke-width="1">
+    <path d="M440 56V264M840 56V264"/>
+  </g>
+
+  <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+
+    <!-- ── Caja 1 · Formacion ── -->
+    <g>
+      <circle cx="72" cy="76" r="3" fill="#E8A44C" filter="url(#pt)">
+        <animate attributeName="opacity" values="1;0.35;1" dur="3.4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="90" y="80" font-size="12" font-weight="700" fill="#E8A44C" letter-spacing="5">TRAINING</text>
+
+      <text x="72" y="128" font-size="21" font-weight="600" fill="#F2E9D8"
+            font-family="Georgia, 'Times New Roman', serif" letter-spacing="-0.4">Economist</text>
+      <text x="72" y="154" font-size="15" fill="#8E8272">Political economy, heterodox theory,</text>
+      <text x="72" y="176" font-size="15" fill="#8E8272">data analysis.</text>
+
+      <text x="72" y="220" font-size="21" font-weight="600" fill="#F2E9D8"
+            font-family="Georgia, 'Times New Roman', serif" letter-spacing="-0.4">Software Technologist</text>
+      <text x="72" y="246" font-size="15" fill="#8E8272">Analysis and Development of</text>
+      <text x="72" y="268" font-size="15" fill="#8E8272">Information Systems — ADSO.</text>
+    </g>
+
+    <!-- ── Caja 2 · Practica ── -->
+    <g>
+      <circle cx="488" cy="76" r="3" fill="#3FBF87" filter="url(#pt)">
+        <animate attributeName="opacity" values="0.35;1;0.35" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="506" y="80" font-size="12" font-weight="700" fill="#3FBF87" letter-spacing="5">ENGINEERING</text>
+
+      <g font-size="15" fill="#C9BCA6">
+        <text x="488" y="126">Multi-agent architecture and</text>
+        <text x="488" y="148">control-plane design</text>
+      </g>
+      <g font-size="15" fill="#8E8272">
+        <text x="488" y="184">Durable routing · typed protocols</text>
+        <text x="488" y="208">Transactional state · dead letters</text>
+        <text x="488" y="232">Test discipline · blocking CI</text>
+        <text x="488" y="256">Secret hygiene · per-client isolation</text>
+      </g>
+    </g>
+
+    <!-- ── Caja 3 · Donde encontrarme ── -->
+    <g>
+      <circle cx="888" cy="76" r="3" fill="#D4402C" filter="url(#pt)">
+        <animate attributeName="opacity" values="1;0.4;1" dur="4.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="906" y="80" font-size="12" font-weight="700" fill="#D4402C" letter-spacing="5">ELSEWHERE</text>
+
+      <g>
+        <rect x="888" y="106" width="320" height="46" rx="4" fill="#FCF8F0" fill-opacity="0.04" stroke="#FCF8F0" stroke-opacity="0.12"/>
+        <text x="908" y="126" font-size="12" font-weight="700" fill="#7FB2E8" letter-spacing="2.6">LINKEDIN</text>
+        <text x="908" y="144" font-size="14" fill="#C9BCA6">in/jhon-alvarez-446257282</text>
+      </g>
+
+      <g>
+        <rect x="888" y="166" width="320" height="46" rx="4" fill="#FCF8F0" fill-opacity="0.04" stroke="#FCF8F0" stroke-opacity="0.12"/>
+        <text x="908" y="186" font-size="12" font-weight="700" fill="#3FBF87" letter-spacing="2.6">HUMANIZAR.TECH</text>
+        <text x="908" y="204" font-size="14" fill="#C9BCA6">CAUCE V3 · with Steven Vallejo Ortiz</text>
+      </g>
+
+      <g>
+        <rect x="888" y="226" width="320" height="46" rx="4" fill="#FCF8F0" fill-opacity="0.04" stroke="#FCF8F0" stroke-opacity="0.12"/>
+        <text x="908" y="246" font-size="12" font-weight="700" fill="#E8A44C" letter-spacing="2.6">GITHUB</text>
+        <text x="908" y="264" font-size="14" fill="#C9BCA6">16 public repositories</text>
+      </g>
+    </g>
+  </g>
+</svg>

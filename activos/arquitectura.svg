@@ -2,6 +2,18 @@
   <title>CAUCE V3 — architecture</title>
 
   <defs>
+    <linearGradient id="cintaA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="0">
+      <stop offset="0"   stop-color="#E8A44C" stop-opacity="0"/>
+      <stop offset="0.4" stop-color="#E8A44C"/>
+      <stop offset="0.7" stop-color="#3FBF87"/>
+      <stop offset="1"   stop-color="#3FBF87" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="-1280 0; 1280 0" dur="13s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="brillo" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <linearGradient id="lienzo" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="440">
       <stop offset="0" stop-color="#0A0F14"/>
       <stop offset="1" stop-color="#1A1410"/>
@@ -20,6 +32,7 @@
   </defs>
 
   <rect width="1280" height="440" fill="url(#lienzo)"/>
+  <rect width="1280" height="3" fill="url(#cintaA)"/>
 
   <g font-family="'Segoe UI', -apple-system, Arial, sans-serif">
 
@@ -85,6 +98,37 @@
       <text x="1129" y="202" font-size="11.5" fill="#3FBF87" fill-opacity="0.8" text-anchor="middle">verified · typed</text>
     </g>
 
+
+    <!-- El trabajo atravesando la cadena. Un pulso cada 2,2 s recorre las cinco
+         etapas: es lo que el diagrama describe, ocurriendo. -->
+    <g fill="#FFE0A8" filter="url(#brillo)">
+      <circle r="3.6" opacity="0">
+        <animateMotion dur="4.4s" repeatCount="indefinite"
+          path="M222 188 H272 M484 188 H534 M722 188 H772 M984 188 H1034"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.92;1" dur="4.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g fill="#FFE0A8" filter="url(#brillo)">
+      <circle cx="247" cy="188" r="3">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="509" cy="188" r="3">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="0.55s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="747" cy="188" r="3">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1009" cy="188" r="3">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="1.65s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- El artefacto verificado late al recibir -->
+    <rect x="1042" y="150" width="174" height="76" rx="6" fill="none"
+          stroke="#3FBF87" stroke-width="1.4" opacity="0">
+      <animate attributeName="opacity" values="0;0.75;0" dur="2.2s" begin="1.9s" repeatCount="indefinite"/>
+    </rect>
+
     <!-- ── Franja inferior: lo que no delega la máquina ───────────── -->
     <g>
       <path d="M64 340H1216" stroke="#E8A44C" stroke-opacity="0.18" stroke-width="1"/>
@@ -97,11 +141,11 @@
         <text x="940"  y="404">Per-client isolation at the storage layer</text>
       </g>
       <g fill="#C4442F" fill-opacity="0.85">
-        <circle cx="52" cy="400" r="2.6"/>
-        <circle cx="318" cy="400" r="2.6"/>
-        <circle cx="548" cy="400" r="2.6"/>
-        <circle cx="778" cy="400" r="2.6"/>
-        <circle cx="928" cy="400" r="2.6"/>
+        <circle cx="52" cy="400" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="3.1s" repeatCount="indefinite"/></circle>
+        <circle cx="318" cy="400" r="2.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.7s" repeatCount="indefinite"/></circle>
+        <circle cx="548" cy="400" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="4.3s" repeatCount="indefinite"/></circle>
+        <circle cx="778" cy="400" r="2.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.4s" repeatCount="indefinite"/></circle>
+        <circle cx="928" cy="400" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="4.9s" repeatCount="indefinite"/></circle>
       </g>
     </g>
   </g>

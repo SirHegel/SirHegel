@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360"
+     role="img" aria-label="Measured performance across five production repositories">
+  <title>Measured performance</title>
+
+  <!--
+    PANEL DE RENDIMIENTO
+
+    Todas las cifras estan medidas sobre los archivos versionados de los cinco
+    repositorios serios, no estimadas. Fuente frente a prueba se cuenta por
+    extension y por ruta: cualquier archivo bajo test/, tests/ o pruebas/, o
+    cuyo nombre contenga test, cuenta como prueba.
+
+    Las barras crecen desde cero al cargar: es la unica animacion de datos, y
+    ocurre una sola vez, no en bucle, para no distraer de la lectura.
+  -->
+
+  <defs>
+    <linearGradient id="fondoM" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="360">
+      <stop offset="0"   stop-color="#080B11"/>
+      <stop offset="1"   stop-color="#140F0C"/>
+    </linearGradient>
+    <linearGradient id="barra" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D4402C"/>
+      <stop offset="1" stop-color="#E8A44C"/>
+    </linearGradient>
+    <linearGradient id="barraT" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E8F68"/>
+      <stop offset="1" stop-color="#3FBF87"/>
+    </linearGradient>
+    <linearGradient id="cintaM" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="0">
+      <stop offset="0"    stop-color="#3FBF87" stop-opacity="0"/>
+      <stop offset="0.4"  stop-color="#3FBF87"/>
+      <stop offset="0.7"  stop-color="#E8A44C"/>
+      <stop offset="1"    stop-color="#E8A44C" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="-1280 0; 1280 0" dur="14s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="360" rx="4" fill="url(#fondoM)"/>
+  <rect width="1280" height="3" fill="url(#cintaM)"/>
+
+  <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <text x="72" y="52" font-size="12" font-weight="700" fill="#E8A44C" letter-spacing="5">MEASURED, NOT ESTIMATED</text>
+
+    <!-- ── Cifras agregadas ── -->
+    <g>
+      <text x="72"  y="112" font-size="40" font-weight="700" fill="#F2E9D8" font-family="Georgia, serif">17,698</text>
+      <text x="72"  y="134" font-size="12" fill="#8E8272" letter-spacing="1.4">LINES OF SOURCE</text>
+
+      <text x="264" y="112" font-size="40" font-weight="700" fill="#3FBF87" font-family="Georgia, serif">3,278</text>
+      <text x="264" y="134" font-size="12" fill="#8E8272" letter-spacing="1.4">LINES OF TEST</text>
+
+      <text x="440" y="112" font-size="40" font-weight="700" fill="#F2E9D8" font-family="Georgia, serif">39</text>
+      <text x="440" y="134" font-size="12" fill="#8E8272" letter-spacing="1.4">COMMITS</text>
+
+      <text x="580" y="112" font-size="40" font-weight="700" fill="#F2E9D8" font-family="Georgia, serif">4</text>
+      <text x="580" y="134" font-size="12" fill="#8E8272" letter-spacing="1.4">CI PIPELINES</text>
+
+      <text x="716" y="112" font-size="40" font-weight="700" fill="#E8A44C" font-family="Georgia, serif">5</text>
+      <text x="716" y="134" font-size="12" fill="#8E8272" letter-spacing="1.4">PRODUCTION REPOS</text>
+    </g>
+
+    <path d="M72 164H1208" stroke="#FCF8F0" stroke-opacity="0.07"/>
+
+    <!-- ── Barras: test frente a fuente, por repositorio ── -->
+    <text x="72" y="194" font-size="12" font-weight="700" fill="#8E8272" letter-spacing="4">TEST LINES PER LINE OF SOURCE</text>
+
+    <g font-size="13">
+      <!-- colmat 0.61 -->
+      <text x="72"  y="230" fill="#C9BCA6">colmat-x-automation</text>
+      <rect x="300" y="218" width="610" height="14" rx="2" fill="#FCF8F0" fill-opacity="0.05"/>
+      <rect x="300" y="218" width="0" height="14" rx="2" fill="url(#barraT)">
+        <animate attributeName="width" from="0" to="372" dur="1.3s" fill="freeze"/>
+      </rect>
+      <text x="930" y="230" fill="#3FBF87" font-weight="700">0.61</text>
+
+      <!-- orquesta 0.25 -->
+      <text x="72"  y="262" fill="#C9BCA6">orquesta-ia</text>
+      <rect x="300" y="250" width="610" height="14" rx="2" fill="#FCF8F0" fill-opacity="0.05"/>
+      <rect x="300" y="250" width="0" height="14" rx="2" fill="url(#barra)">
+        <animate attributeName="width" from="0" to="152" dur="1.3s" begin="0.15s" fill="freeze"/>
+      </rect>
+      <text x="930" y="262" fill="#E8A44C" font-weight="700">0.25</text>
+
+      <!-- bloquitos 0.25 -->
+      <text x="72"  y="294" fill="#C9BCA6">bloquitos</text>
+      <rect x="300" y="282" width="610" height="14" rx="2" fill="#FCF8F0" fill-opacity="0.05"/>
+      <rect x="300" y="282" width="0" height="14" rx="2" fill="url(#barra)">
+        <animate attributeName="width" from="0" to="150" dur="1.3s" begin="0.3s" fill="freeze"/>
+      </rect>
+      <text x="930" y="294" fill="#E8A44C" font-weight="700">0.25</text>
+
+      <!-- sincategorematico 0.12 -->
+      <text x="72"  y="326" fill="#C9BCA6">sincategorematico-bot</text>
+      <rect x="300" y="314" width="610" height="14" rx="2" fill="#FCF8F0" fill-opacity="0.05"/>
+      <rect x="300" y="314" width="0" height="14" rx="2" fill="url(#barra)">
+        <animate attributeName="width" from="0" to="73" dur="1.3s" begin="0.45s" fill="freeze"/>
+      </rect>
+      <text x="930" y="326" fill="#8E8272" font-weight="700">0.12</text>
+    </g>
+
+    <!-- ── Reparto por lenguaje ── -->
+    <g>
+      <text x="1000" y="194" font-size="12" font-weight="700" fill="#8E8272" letter-spacing="4">LANGUAGE</text>
+      <g font-size="13">
+        <text x="1000" y="230" fill="#C9BCA6">Python</text>
+        <text x="1180" y="230" fill="#F2E9D8" font-weight="700" text-anchor="end">76%</text>
+        <rect x="1000" y="238" width="0" height="4" rx="2" fill="#E8A44C">
+          <animate attributeName="width" from="0" to="137" dur="1.1s" fill="freeze"/>
+        </rect>
+
+        <text x="1000" y="272" fill="#C9BCA6">JavaScript</text>
+        <text x="1180" y="272" fill="#F2E9D8" font-weight="700" text-anchor="end">21%</text>
+        <rect x="1000" y="280" width="0" height="4" rx="2" fill="#3FBF87">
+          <animate attributeName="width" from="0" to="38" dur="1.1s" begin="0.2s" fill="freeze"/>
+        </rect>
+
+        <text x="1000" y="314" fill="#C9BCA6">Shell</text>
+        <text x="1180" y="314" fill="#F2E9D8" font-weight="700" text-anchor="end">2%</text>
+        <rect x="1000" y="322" width="0" height="4" rx="2" fill="#D4402C">
+          <animate attributeName="width" from="0" to="4" dur="1.1s" begin="0.4s" fill="freeze"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+</svg>

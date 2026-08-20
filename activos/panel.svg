@@ -1,286 +1,263 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520"
-     role="img" aria-label="SirHegel — economics, agent systems, philosophy">
-  <title>SirHegel</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 556" width="1280" height="556"
+     role="img" aria-label="Jhon Alvarez — economics, agent systems, philosophy">
+  <title>Jhon Alvarez · SirHegel</title>
 
   <!--
-    PANEL DE CABECERA
+    HERO · Paris, Texas
 
-    Estructura: rejilla suiza de doce columnas (Muller-Brockmann). La tipografia
-    se alinea a la primera columna y la jerarquia se construye por escala
-    modular de razon 1,333 (cuarta justa), no por adorno:
+    Perspectiva atmosferica en cuatro planos: cada cordillera mas clara y menos
+    contrastada que la anterior, porque el aire interpuesto dispersa la luz. Es
+    lo que hace que una llanura se lea profunda y no como un recorte.
 
-        92 px  nombre        serif,  interletraje -3,5
-        12 px  credencial    sans,   interletraje +6, versalitas
-        19 px  entrada       sans
-        17 px  apoyo         sans
-        13,5   pie           serif italica
+    El tendido telegrafico cruza el ancho COMPLETO del cuadro y converge hacia
+    el punto de fuga, junto al sol. Los postes se acortan y se juntan segun se
+    alejan. La carretera repite la misma fuga desde el borde inferior.
 
-    El salto de 92 a 12 es deliberado: el contraste extremo entre display y
-    versalita es lo que sostiene la pagina sin necesidad de mas recursos.
-
-    Color y luz: fotografia de Robby Muller en Paris, Texas. Cielo de azul de
-    noche a ambar de atardecer, tierra en sombra, y el verde neon de los
-    carteles. Sobre eso, tres capas que se mueven: los rayos volumetricos, el
-    latido de los nodos y un barrido de luz que recorre el nombre.
-
-    El grano de pelicula (feTurbulence) va encima de todo, al 5%: es lo que
-    impide que los degradados se vean digitales.
+    LEGIBILIDAD: la placa de texto flota en el cielo y termina ANTES del
+    horizonte, de modo que el paisaje corre entero por debajo sin quedar
+    tapado. Ninguna letra se apoya sobre algo que se mueva.
   -->
 
   <defs>
-    <linearGradient id="cielo" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="352">
-      <stop offset="0"    stop-color="#070B14"/>
-      <stop offset="0.30" stop-color="#0F2334"/>
-      <stop offset="0.62" stop-color="#2C4A5E"/>
-      <stop offset="0.86" stop-color="#7A5A46"/>
-      <stop offset="1"    stop-color="#C97A3C"/>
+    <linearGradient id="cielo" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="448">
+      <stop offset="0"    stop-color="#050810"/>
+      <stop offset="0.26" stop-color="#0D2030"/>
+      <stop offset="0.55" stop-color="#2A4A60"/>
+      <stop offset="0.78" stop-color="#8B5C3E"/>
+      <stop offset="0.93" stop-color="#D4813C"/>
+      <stop offset="1"    stop-color="#F0A855"/>
     </linearGradient>
 
-    <linearGradient id="tierra" gradientUnits="userSpaceOnUse" x1="0" y1="352" x2="0" y2="520">
-      <stop offset="0"   stop-color="#3A2318"/>
-      <stop offset="0.5" stop-color="#1A100C"/>
-      <stop offset="1"   stop-color="#0B0705"/>
+    <linearGradient id="suelo" gradientUnits="userSpaceOnUse" x1="0" y1="448" x2="0" y2="556">
+      <stop offset="0"   stop-color="#7A4526"/>
+      <stop offset="0.3" stop-color="#3D2216"/>
+      <stop offset="1"   stop-color="#0D0806"/>
     </linearGradient>
 
     <radialGradient id="sol" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0"    stop-color="#FFD9A0" stop-opacity="0.85"/>
-      <stop offset="0.22" stop-color="#F0A14B" stop-opacity="0.45"/>
-      <stop offset="0.55" stop-color="#C4562C" stop-opacity="0.18"/>
+      <stop offset="0"    stop-color="#FFF0CC" stop-opacity="0.95"/>
+      <stop offset="0.14" stop-color="#FFCE8A" stop-opacity="0.6"/>
+      <stop offset="0.42" stop-color="#E2803A" stop-opacity="0.22"/>
       <stop offset="1"    stop-color="#C4562C" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="tituloBase" gradientUnits="userSpaceOnUse" x1="96" y1="150" x2="760" y2="250">
-      <stop offset="0" stop-color="#FBF6EC"/>
-      <stop offset="1" stop-color="#CBBBA2"/>
+    <linearGradient id="marfil" gradientUnits="userSpaceOnUse" x1="88" y1="110" x2="720" y2="200">
+      <stop offset="0" stop-color="#FCF8F0"/>
+      <stop offset="1" stop-color="#CFC0A6"/>
     </linearGradient>
 
-    <!-- Barrido: el degradado se desplaza sobre el nombre, como el reflejo de
-         un faro que pasa. Es lo unico que se mueve en la tipografia. -->
-    <linearGradient id="barrido" gradientUnits="userSpaceOnUse" x1="-380" y1="0" x2="-120" y2="0">
+    <linearGradient id="barrido" gradientUnits="userSpaceOnUse" x1="-400" y1="0" x2="-130" y2="0">
       <stop offset="0"   stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="0.45" stop-color="#FFF3DA" stop-opacity="0.85"/>
-      <stop offset="0.55" stop-color="#FFF3DA" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#FFF6E2" stop-opacity="0.9"/>
       <stop offset="1"   stop-color="#FFFFFF" stop-opacity="0"/>
       <animateTransform attributeName="gradientTransform" type="translate"
-                        values="0 0; 1740 0; 1740 0" dur="5s" keyTimes="0;0.6;1"
-                        repeatCount="indefinite"/>
+                        values="0 0; 1900 0" dur="6s" repeatCount="indefinite"/>
     </linearGradient>
 
-    <linearGradient id="filete" gradientUnits="userSpaceOnUse" x1="96" y1="0" x2="640" y2="0">
-      <stop offset="0"   stop-color="#C4442F"/>
-      <stop offset="0.55" stop-color="#E8A44C" stop-opacity="0.65"/>
+    <linearGradient id="filete" gradientUnits="userSpaceOnUse" x1="88" y1="0" x2="600" y2="0">
+      <stop offset="0"   stop-color="#D4402C"/>
+      <stop offset="0.5" stop-color="#E8A44C" stop-opacity="0.7"/>
       <stop offset="1"   stop-color="#E8A44C" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Nace luminoso en el sol (abajo) y se disipa al subir. userSpaceOnUse
-         porque los rayos son poligonos finos y la caja delimitadora deforma
-         el degradado. -->
-    <linearGradient id="rayo" gradientUnits="userSpaceOnUse" x1="0" y1="352" x2="0" y2="60">
-      <stop offset="0"    stop-color="#FFCE90" stop-opacity="0.34"/>
-      <stop offset="0.35" stop-color="#F0A14B" stop-opacity="0.14"/>
-      <stop offset="1"    stop-color="#F0A14B" stop-opacity="0"/>
+    <linearGradient id="rayo" gradientUnits="userSpaceOnUse" x1="0" y1="448" x2="0" y2="140">
+      <stop offset="0"   stop-color="#FFD9A0" stop-opacity="0.30"/>
+      <stop offset="0.4" stop-color="#F0A14B" stop-opacity="0.10"/>
+      <stop offset="1"   stop-color="#F0A14B" stop-opacity="0"/>
     </linearGradient>
 
-
-    <!-- Faro: una banda de luz que cruza el panel entero cada 9 s. Es el
-         movimiento mas visible de la composicion y el que da la sensacion de
-         que el plano esta vivo. -->
-    <linearGradient id="faro" gradientUnits="userSpaceOnUse" x1="-520" y1="0" x2="-160" y2="520">
-      <stop offset="0"    stop-color="#FFE9C4" stop-opacity="0"/>
-      <stop offset="0.5"  stop-color="#FFE9C4" stop-opacity="0.13"/>
-      <stop offset="1"    stop-color="#FFE9C4" stop-opacity="0"/>
+    <linearGradient id="faro" gradientUnits="userSpaceOnUse" x1="-540" y1="0" x2="-170" y2="556">
+      <stop offset="0"   stop-color="#FFE9C4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFE9C4" stop-opacity="0.16"/>
+      <stop offset="1"   stop-color="#FFE9C4" stop-opacity="0"/>
       <animateTransform attributeName="gradientTransform" type="translate"
-                        values="0 0; 2200 0" dur="9s" repeatCount="indefinite"/>
+                        values="0 0; 2300 0" dur="10s" repeatCount="indefinite"/>
     </linearGradient>
 
-    <!-- Resplandor para el neon -->
-    <filter id="resplandor" x="-120%" y="-120%" width="340%" height="340%">
-      <feGaussianBlur stdDeviation="4" result="b1"/>
-      <feGaussianBlur stdDeviation="10" result="b2"/>
-      <feMerge>
-        <feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="neon" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="3" result="a"/>
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="a"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <filter id="resplandorSuave" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="7" result="b"/>
+    <filter id="halo" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <!-- Grano de pelicula -->
     <filter id="grano" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="11" result="n"/>
       <feColorMatrix in="n" type="saturate" values="0"/>
     </filter>
 
-    <clipPath id="marco"><rect width="1280" height="520" rx="4"/></clipPath>
+    <clipPath id="marco"><rect width="1280" height="556" rx="4"/></clipPath>
   </defs>
 
   <g clip-path="url(#marco)">
 
-    <!-- 1 · Cielo y tierra -->
-    <rect width="1280" height="352" fill="url(#cielo)"/>
-    <rect y="352" width="1280" height="168" fill="url(#tierra)"/>
+    <rect width="1280" height="448" fill="url(#cielo)"/>
+    <rect y="448" width="1280" height="108" fill="url(#suelo)"/>
 
-    <!-- 2 · Estrellas, con parpadeo escalonado -->
-    <g fill="#FBF6EC">
-      <circle cx="140" cy="46"  r="1.1"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="4.1s" repeatCount="indefinite"/></circle>
-      <circle cx="318" cy="82"  r="0.9"><animate attributeName="opacity" values="0.6;0.12;0.6"  dur="5.3s" repeatCount="indefinite"/></circle>
-      <circle cx="502" cy="38"  r="1.2"><animate attributeName="opacity" values="0.2;0.75;0.2"  dur="6.7s" repeatCount="indefinite"/></circle>
-      <circle cx="676" cy="94"  r="0.8"><animate attributeName="opacity" values="0.7;0.2;0.7"   dur="3.9s" repeatCount="indefinite"/></circle>
-      <circle cx="874" cy="52"  r="1.0"><animate attributeName="opacity" values="0.18;0.7;0.18" dur="5.9s" repeatCount="indefinite"/></circle>
-      <circle cx="1046" cy="88" r="1.1"><animate attributeName="opacity" values="0.5;0.15;0.5"  dur="4.6s" repeatCount="indefinite"/></circle>
-      <circle cx="1188" cy="44" r="0.9"><animate attributeName="opacity" values="0.25;0.8;0.25" dur="7.2s" repeatCount="indefinite"/></circle>
-      <circle cx="228" cy="118" r="0.8"><animate attributeName="opacity" values="0.6;0.18;0.6"  dur="6.1s" repeatCount="indefinite"/></circle>
-      <circle cx="960" cy="128" r="0.9"><animate attributeName="opacity" values="0.2;0.65;0.2"  dur="4.8s" repeatCount="indefinite"/></circle>
+    <!-- Estrellas -->
+    <g fill="#FCF8F0">
+      <circle cx="128"  cy="40"  r="1.1"><animate attributeName="opacity" values="0.15;0.85;0.15" dur="4.1s" repeatCount="indefinite"/></circle>
+      <circle cx="342"  cy="72"  r="0.9"><animate attributeName="opacity" values="0.7;0.1;0.7"    dur="5.3s" repeatCount="indefinite"/></circle>
+      <circle cx="556"  cy="32"  r="1.2"><animate attributeName="opacity" values="0.2;0.8;0.2"    dur="6.7s" repeatCount="indefinite"/></circle>
+      <circle cx="792"  cy="84"  r="0.8"><animate attributeName="opacity" values="0.75;0.15;0.75" dur="3.9s" repeatCount="indefinite"/></circle>
+      <circle cx="1004" cy="46"  r="1.0"><animate attributeName="opacity" values="0.18;0.75;0.18" dur="5.9s" repeatCount="indefinite"/></circle>
+      <circle cx="1196" cy="92"  r="1.1"><animate attributeName="opacity" values="0.6;0.12;0.6"   dur="4.6s" repeatCount="indefinite"/></circle>
+      <circle cx="906"  cy="130" r="0.8"><animate attributeName="opacity" values="0.5;0.15;0.5"   dur="7.2s" repeatCount="indefinite"/></circle>
     </g>
 
-    <!-- 3 · Rayos volumetricos desde el sol -->
-    <g opacity="0.85">
-      <g transform="translate(1010 352)">
-        <polygon points="0,0 -150,-300 -108,-300" fill="url(#rayo)">
-          <animate attributeName="opacity" values="0.35;0.85;0.35" dur="11s" repeatCount="indefinite"/>
-        </polygon>
-        <polygon points="0,0 -54,-300 -16,-300" fill="url(#rayo)">
-          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="9s" repeatCount="indefinite"/>
-        </polygon>
-        <polygon points="0,0 46,-300 92,-300" fill="url(#rayo)">
-          <animate attributeName="opacity" values="0.4;0.9;0.4" dur="13s" repeatCount="indefinite"/>
-        </polygon>
-        <polygon points="0,0 140,-300 190,-300" fill="url(#rayo)">
-          <animate attributeName="opacity" values="0.7;0.25;0.7" dur="10s" repeatCount="indefinite"/>
-        </polygon>
-      </g>
+    <!-- Rayos volumetricos -->
+    <g transform="translate(946 448)" opacity="0.9">
+      <polygon points="0,0 -180,-340 -130,-340" fill="url(#rayo)"><animate attributeName="opacity" values="0.35;0.9;0.35" dur="11s" repeatCount="indefinite"/></polygon>
+      <polygon points="0,0 -66,-340 -18,-340"   fill="url(#rayo)"><animate attributeName="opacity" values="0.85;0.3;0.85" dur="9s"  repeatCount="indefinite"/></polygon>
+      <polygon points="0,0 56,-340 110,-340"    fill="url(#rayo)"><animate attributeName="opacity" values="0.4;0.95;0.4" dur="13s" repeatCount="indefinite"/></polygon>
+      <polygon points="0,0 168,-340 226,-340"   fill="url(#rayo)"><animate attributeName="opacity" values="0.7;0.25;0.7" dur="10s" repeatCount="indefinite"/></polygon>
     </g>
 
-    <!-- 4 · El sol, respirando -->
-    <ellipse cx="1010" cy="352" rx="330" ry="168" fill="url(#sol)">
-      <animate attributeName="rx" values="330;352;330" dur="14s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.9;1;0.9" dur="14s" repeatCount="indefinite"/>
+    <!-- Sol -->
+    <ellipse cx="946" cy="448" rx="300" ry="150" fill="url(#sol)">
+      <animate attributeName="rx" values="300;322;300" dur="15s" repeatCount="indefinite"/>
     </ellipse>
+    <circle cx="946" cy="448" r="26" fill="#FFF0CC" opacity="0.85" filter="url(#halo)">
+      <animate attributeName="r" values="26;29;26" dur="15s" repeatCount="indefinite"/>
+    </circle>
 
-    <!-- 5 · Mesa: la silueta del fondo -->
-    <path d="M0 352 L0 330 L86 330 L124 314 L232 314 L264 330 L392 330 L392 352 Z"
-          fill="#0B0F16" opacity="0.55"/>
-    <path d="M1136 352 L1136 322 L1180 322 L1206 306 L1280 306 L1280 352 Z"
-          fill="#0B0F16" opacity="0.45"/>
+    <!-- ── MESAS · cuatro planos, del mas lejano al mas cercano ── -->
+    <path d="M0 448 L0 404 L74 404 L110 392 L206 392 L238 404 L352 404 L392 386 L486 386 L520 404
+             L1280 404 L1280 448 Z" fill="#6E5442" opacity="0.30"/>
+    <path d="M0 448 L0 414 L128 414 L168 398 L262 398 L300 414 L556 414 L556 448 Z
+             M1040 448 L1040 398 L1090 398 L1126 382 L1280 382 L1280 448 Z" fill="#4A3428" opacity="0.5"/>
+    <path d="M0 448 L0 428 L96 428 L142 410 L236 410 L282 428 L430 428 L430 448 Z
+             M1150 448 L1150 412 L1200 412 L1232 396 L1280 396 L1280 448 Z" fill="#2E1F17" opacity="0.72"/>
+    <path d="M0 448 L0 438 L64 438 L104 424 L178 424 L214 438 L296 438 L296 448 Z" fill="#160E0A"/>
 
-    <!-- 6 · Linea del horizonte -->
-    <path d="M0 352H1280" stroke="#FFC98A" stroke-opacity="0.55" stroke-width="1"/>
+    <!-- ── CARRETERA · fuga hacia el sol ── -->
+    <path d="M912 448 L1280 556 L1140 556 L900 448 Z" fill="#1A1310" opacity="0.5"/>
+    <g stroke="#E8C79A" stroke-opacity="0.28" stroke-width="2">
+      <path d="M910 458 L946 476"/>
+      <path d="M962 502 L1016 530"/>
+      <path d="M1040 566 L1112 604"/>
+    </g>
 
-    <!-- 7 · Postes con nodos de neon -->
+    <path d="M0 448H1280" stroke="#FFC98A" stroke-opacity="0.5" stroke-width="1"/>
+
+    <!-- ══ TENDIDO · cruza el ancho completo y converge en el sol ══
+         Los postes se acortan y se juntan hacia el punto de fuga. -->
     <g>
-      <path d="M718 352V292M826 352V276M934 352V286M1042 352V266M1150 352V290"
-            stroke="#080C10" stroke-opacity="0.85" stroke-width="2.4"/>
-      <path d="M718 292 L826 276 L934 286 L1042 266 L1150 290"
-            fill="none" stroke="#3FBF87" stroke-opacity="0.45" stroke-width="1.2"/>
+      <path d="M40 448V300 M196 448V318 M336 448V334 M460 448V348 M568 448V360
+               M662 448V370 M742 448V379 M808 448V386 M862 448V392 M906 448V397"
+            stroke="#0A0806" stroke-opacity="0.9" stroke-width="2.6"/>
+      <path d="M20 306 H60 M178 323 H214 M320 339 H352 M446 353 H474 M556 365 H580
+               M651 375 H673 M732 384 H752 M799 391 H817 M854 397 H870 M899 402 H913"
+            stroke="#0A0806" stroke-opacity="0.9" stroke-width="2"/>
+      <path d="M40 300 L196 318 L336 334 L460 348 L568 360 L662 370 L742 379 L808 386 L862 392 L906 397"
+            fill="none" stroke="#3FBF87" stroke-opacity="0.40" stroke-width="1.2"/>
 
-      <g fill="#5BF0AE" filter="url(#resplandor)">
-        <circle cx="718"  cy="292" r="2.6"><animate attributeName="r" values="2;6;2" dur="2.4s" repeatCount="indefinite"/></circle>
-        <circle cx="826"  cy="276" r="2.6"><animate attributeName="r" values="6;2;6" dur="2.9s" repeatCount="indefinite"/></circle>
-        <circle cx="934"  cy="286" r="2.6"><animate attributeName="r" values="2;5.6;2" dur="2.1s" repeatCount="indefinite"/></circle>
-        <circle cx="1042" cy="266" r="2.6"><animate attributeName="r" values="5.8;2;5.8" dur="3.3s" repeatCount="indefinite"/></circle>
-        <circle cx="1150" cy="290" r="2.6"><animate attributeName="r" values="2;5.4;2" dur="2.6s" repeatCount="indefinite"/></circle>
+      <g fill="#5BF0AE" filter="url(#neon)">
+        <circle cx="40"  cy="300" r="3.2"><animate attributeName="r" values="2.2;6;2.2" dur="2.4s" repeatCount="indefinite"/></circle>
+        <circle cx="196" cy="318" r="3"  ><animate attributeName="r" values="5.6;2;5.6" dur="2.9s" repeatCount="indefinite"/></circle>
+        <circle cx="336" cy="334" r="2.8"><animate attributeName="r" values="2;5.2;2"   dur="2.1s" repeatCount="indefinite"/></circle>
+        <circle cx="460" cy="348" r="2.6"><animate attributeName="r" values="4.8;1.9;4.8" dur="3.3s" repeatCount="indefinite"/></circle>
+        <circle cx="568" cy="360" r="2.4"><animate attributeName="r" values="1.8;4.4;1.8" dur="2.6s" repeatCount="indefinite"/></circle>
+        <circle cx="662" cy="370" r="2.2"><animate attributeName="r" values="4;1.7;4"   dur="3.7s" repeatCount="indefinite"/></circle>
+        <circle cx="742" cy="379" r="2"  ><animate attributeName="r" values="1.6;3.6;1.6" dur="2.3s" repeatCount="indefinite"/></circle>
+        <circle cx="808" cy="386" r="1.8"><animate attributeName="r" values="3.2;1.5;3.2" dur="3.1s" repeatCount="indefinite"/></circle>
+        <circle cx="862" cy="392" r="1.6"/>
+        <circle cx="906" cy="397" r="1.4"/>
       </g>
 
-
-      <!-- Pulsos de datos: recorren el cable de poste a poste. No es adorno,
-           es lo que el diagrama dice en palabras — trabajo que atraviesa el
-           plano de control. Tres pulsos escalonados sobre la misma ruta. -->
-      <g fill="#B9FFE0" filter="url(#resplandor)">
+      <!-- Pulsos de datos: recorren el tendido entero de izquierda a derecha -->
+      <g fill="#C8FFE8" filter="url(#neon)">
         <circle r="3.4" opacity="0">
-          <animateMotion dur="4s" repeatCount="indefinite"
-                         path="M718 292 L826 276 L934 286 L1042 266 L1150 290"/>
-          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4s" repeatCount="indefinite"/>
+          <animateMotion dur="5s" repeatCount="indefinite" path="M40 300 L196 318 L336 334 L460 348 L568 360 L662 370 L742 379 L808 386 L862 392 L906 397"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="5s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="3.4;1.4" dur="5s" repeatCount="indefinite"/>
         </circle>
-        <circle r="3" opacity="0">
-          <animateMotion dur="4s" begin="1.3s" repeatCount="indefinite"
-                         path="M718 292 L826 276 L934 286 L1042 266 L1150 290"/>
-          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4s" begin="1.3s" repeatCount="indefinite"/>
+        <circle r="3.4" opacity="0">
+          <animateMotion dur="5s" begin="1.7s" repeatCount="indefinite" path="M40 300 L196 318 L336 334 L460 348 L568 360 L662 370 L742 379 L808 386 L862 392 L906 397"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="5s" begin="1.7s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="3.4;1.4" dur="5s" begin="1.7s" repeatCount="indefinite"/>
         </circle>
-        <circle r="2.6" opacity="0">
-          <animateMotion dur="4s" begin="2.6s" repeatCount="indefinite"
-                         path="M718 292 L826 276 L934 286 L1042 266 L1150 290"/>
-          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4s" begin="2.6s" repeatCount="indefinite"/>
+        <circle r="3.4" opacity="0">
+          <animateMotion dur="5s" begin="3.4s" repeatCount="indefinite" path="M40 300 L196 318 L336 334 L460 348 L568 360 L662 370 L742 379 L808 386 L862 392 L906 397"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="5s" begin="3.4s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="3.4;1.4" dur="5s" begin="3.4s" repeatCount="indefinite"/>
         </circle>
       </g>
 
-      <g font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="9.5"
-         fill="#5BF0AE" fill-opacity="0.62" letter-spacing="3">
-        <text x="718" y="242">CONTROL PLANE · N TEAMS</text>
+      <g font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="10"
+         fill="#5BF0AE" fill-opacity="0.62" letter-spacing="3.4">
+        <text x="742" y="352">CONTROL PLANE · N TEAMS</text>
       </g>
     </g>
 
-
-    <!-- Polvo en suspension: deriva lenta hacia la derecha. Da profundidad de
-         aire entre el observador y el horizonte. -->
-    <g fill="#FFE9C4" opacity="0.5">
-      <circle cx="200" cy="300" r="1.3">
-        <animate attributeName="cx" values="140;1180" dur="26s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="300;272;300" dur="26s" repeatCount="indefinite"/>
+    <!-- Polvo en suspension -->
+    <g fill="#FFE9C4">
+      <circle cx="200" cy="380" r="1.3">
+        <animate attributeName="cx" values="120;1200" dur="26s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="380;350;380" dur="26s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0.55;0.55;0" keyTimes="0;0.1;0.85;1" dur="26s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="400" cy="216" r="1">
-        <animate attributeName="cx" values="60;1220" dur="34s" begin="5s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="216;242;216" dur="34s" begin="5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.4;0.4;0" keyTimes="0;0.1;0.85;1" dur="34s" begin="5s" repeatCount="indefinite"/>
+      <circle cx="400" cy="300" r="1">
+        <animate attributeName="cx" values="40;1240" dur="34s" begin="6s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="300;328;300" dur="34s" begin="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.42;0.42;0" keyTimes="0;0.1;0.85;1" dur="34s" begin="6s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="700" cy="330" r="1.5">
-        <animate attributeName="cx" values="200;1260" dur="30s" begin="11s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="330;306;330" dur="30s" begin="11s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.5;0.5;0" keyTimes="0;0.1;0.85;1" dur="30s" begin="11s" repeatCount="indefinite"/>
+      <circle cx="700" cy="424" r="1.5">
+        <animate attributeName="cx" values="180;1260" dur="30s" begin="13s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="424;400;424" dur="30s" begin="13s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.5;0.5;0" keyTimes="0;0.1;0.85;1" dur="30s" begin="13s" repeatCount="indefinite"/>
       </circle>
     </g>
 
-    <!-- 8 · Rejilla suiza de doce columnas -->
-    <g stroke="#FBF6EC" stroke-opacity="0.042" stroke-width="1">
-      <path d="M96 0V520M192 0V520M288 0V520M384 0V520M480 0V520M576 0V520M672 0V520M768 0V520M864 0V520M960 0V520M1056 0V520M1152 0V520"/>
-    </g>
-    <g stroke="#FBF6EC" stroke-opacity="0.055" stroke-width="1">
-      <path d="M0 40H1280M0 480H1280"/>
+    <rect width="1280" height="556" fill="url(#faro)"/>
+
+    <g stroke="#FCF8F0" stroke-opacity="0.038" stroke-width="1">
+      <path d="M88 0V556M184 0V556M280 0V556M376 0V556M472 0V556M568 0V556M664 0V556M760 0V556M856 0V556M952 0V556M1048 0V556M1144 0V556"/>
     </g>
 
-    <!-- ═══ 9 · TIPOGRAFIA ═══ -->
+    <!-- ═══ PLACA · flota en el cielo, termina antes del horizonte ═══ -->
+    <g>
+      <rect x="56" y="52" width="632" height="340" rx="6" fill="#070A0F" fill-opacity="0.88"/>
+      <rect x="56" y="52" width="632" height="340" rx="6" fill="none" stroke="#E8A44C" stroke-opacity="0.18" stroke-width="1"/>
+      <path d="M56 52 V 392" stroke="#D4402C" stroke-opacity="0.75" stroke-width="2.4"/>
+    </g>
 
-    <!-- Display 92 px · el resplandor va detras, no sobre la letra -->
     <g font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif"
        font-size="92" font-weight="700" letter-spacing="-3.5">
-      <text x="96" y="212" fill="#C97A3C" fill-opacity="0.28" filter="url(#resplandorSuave)">SirHegel</text>
-      <text x="96" y="212" fill="url(#tituloBase)">SirHegel</text>
-      <text x="96" y="212" fill="url(#barrido)">SirHegel</text>
+      <text x="88" y="152" fill="#D4813C" fill-opacity="0.22" filter="url(#halo)">SirHegel</text>
+      <text x="88" y="152" fill="url(#marfil)">SirHegel</text>
+      <text x="88" y="152" fill="url(#barrido)">SirHegel</text>
     </g>
 
-    <path d="M96 244H640" stroke="url(#filete)" stroke-width="2.2"/>
+    <g font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="600" letter-spacing="-0.4">
+      <text x="90" y="186" fill="#C9BCA6">Jhon Alvarez</text>
+    </g>
 
-    <!-- Credencial 12 px · versalitas muy espaciadas -->
+    <path d="M88 210H600" stroke="url(#filete)" stroke-width="2"/>
+
     <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
-      <text x="96" y="280" font-size="12" fill="#E8A44C" letter-spacing="6">
+      <text x="88" y="242" font-size="12" font-weight="700" fill="#E8A44C" letter-spacing="6">
         ECONOMICS · AGENT SYSTEMS · PHILOSOPHY
       </text>
+      <text x="88" y="288" font-size="19" fill="#F2E9D8">
+        I build the control plane that turns scattered
+      </text>
+      <text x="88" y="314" font-size="19" fill="#F2E9D8">
+        agents into an operating company.
+      </text>
+      <text x="88" y="346" font-size="16" fill="#9C8F7C">
+        Philosophical materialism, critique of political economy.
+      </text>
     </g>
 
-    <!-- Entrada 19 px y apoyo 17 px -->
-    <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
-      <text x="96" y="404" font-size="19" fill="#F0E4CE">
-        I build the control plane that turns scattered agents into an operating company.
-      </text>
-      <text x="96" y="434" font-size="17" fill="#A2937F">
-        Philosophical materialism, critique of political economy, Hegelian logic.
-      </text>
-    </g>
-
-    <!-- Pie 13,5 px · serif italica -->
     <g font-family="Georgia, 'Times New Roman', serif" font-style="italic">
-      <text x="96" y="470" font-size="13.5" fill="#7A6D5E">
-        An agent is not a company. The difference is categorial, not quantitative.
+      <text x="88" y="374" font-size="14" fill="#847866">
+        An agent is not a company. The difference is categorial.
       </text>
     </g>
 
-    <!-- 9b · El faro pasa por encima de la escena y de la tipografia -->
-    <rect width="1280" height="520" fill="url(#faro)"/>
-
-    <!-- 10 · Grano de pelicula, encima de todo -->
-    <rect width="1280" height="520" filter="url(#grano)" opacity="0.05"
-          style="mix-blend-mode:overlay"/>
+    <rect width="1280" height="556" filter="url(#grano)" opacity="0.05" style="mix-blend-mode:overlay"/>
   </g>
 </svg>
