@@ -1,7 +1,12 @@
-<img src="activos/panel-v2.svg" alt="Jhon Alvarez — economics, agent systems, philosophy" width="100%">
+<img src="activos/panel-v2.svg" alt="Jhon Steven Alvarez Ruiz — economics, agent systems, philosophy" width="100%">
+
+<h1 align="center">Jhon Steven Alvarez Ruiz</h1>
+<p align="center"><b>Economist and data analyst</b> · Neiva, Huila, Colombia</p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/jhon-alvarez-446257282/"><b>LinkedIn</b></a>
+  <a href="https://jhonstevenalvarezruiz.vercel.app"><b>jhonstevenalvarezruiz.vercel.app</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/jhonstevenalvarezruiz/"><b>LinkedIn</b></a>
   &nbsp;·&nbsp;
   <a href="https://www.humanizar.tech/"><b>humanizar.tech</b></a>
   &nbsp;·&nbsp;
@@ -146,4 +151,9 @@ Ordered by technical difficulty measured against the code, not by age or size.
 <p align="center">
   <em>«Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung ihren Flug.»</em><br>
   <sub>Hegel, preface to the <em>Elements of the Philosophy of Right</em></sub>
+</p>
+
+<p align="center">
+  <sub><b>Jhon Steven Alvarez Ruiz</b> · Neiva, Huila, Colombia ·
+  <a href="https://jhonstevenalvarezruiz.vercel.app">jhonstevenalvarezruiz.vercel.app</a></sub>
 </p>
