@@ -1,4 +1,4 @@
-<img src="activos/cabecera.svg" alt="SirHegel — economía, sistemas de agentes, filosofía" width="100%">
+<img src="activos/cabecera-plano.svg" alt="SirHegel — economía, sistemas de agentes, filosofía" width="100%">
 
 <br>
 
