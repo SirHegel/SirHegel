@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="SirHegel — economista, analista de datos y filósofo">
+  <title>SirHegel</title>
+
+  <defs>
+    <!-- Anochecer: el momento en que, según Hegel, la lechuza de Minerva levanta el vuelo. -->
+    <linearGradient id="noche" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0"    stop-color="#0a0d24"/>
+      <stop offset="0.55" stop-color="#141a3d"/>
+      <stop offset="1"    stop-color="#241a3a"/>
+    </linearGradient>
+
+    <radialGradient id="ocaso" cx="0.80" cy="0.92" r="0.62">
+      <stop offset="0"   stop-color="#f0955a" stop-opacity="0.36"/>
+      <stop offset="0.45" stop-color="#c2568a" stop-opacity="0.18"/>
+      <stop offset="1"   stop-color="#c2568a" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="frio" cx="0.10" cy="0.05" r="0.65">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- userSpaceOnUse a proposito: la regla es una linea perfectamente
+         horizontal, asi que su caja delimitadora tiene altura cero y un
+         degradado en objectBoundingBox degenera y no pinta nada. Fijando las
+         coordenadas en el espacio del lienzo, el degradado si se aplica. -->
+    <linearGradient id="filo" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="470" y2="0">
+      <stop offset="0"    stop-color="#5eead4" stop-opacity="0"/>
+      <stop offset="0.28" stop-color="#7dd3fc" stop-opacity="0.85"/>
+      <stop offset="0.62" stop-color="#c4b5fd" stop-opacity="0.85"/>
+      <stop offset="1"    stop-color="#f0abfc" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="tinta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#dbeafe"/>
+      <stop offset="1"   stop-color="#c4b5fd"/>
+    </linearGradient>
+
+    <!-- El lazo autopoiético: un circuito que se cierra sobre sí mismo. -->
+    <linearGradient id="lazo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#5eead4" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#7dd3fc" stop-opacity="0.75"/>
+      <stop offset="1"   stop-color="#c4b5fd" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1280" height="340" fill="url(#noche)"/>
+  <rect width="1280" height="340" fill="url(#ocaso)"/>
+  <rect width="1280" height="340" fill="url(#frio)"/>
+
+  <!-- Retícula tenue: el sustrato de datos sobre el que se apoya todo lo demás. -->
+  <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="1">
+    <path d="M0 60H1280M0 120H1280M0 180H1280M0 240H1280M0 300H1280"/>
+    <path d="M80 0V340M160 0V340M240 0V340M320 0V340M400 0V340M480 0V340M560 0V340M640 0V340M720 0V340M800 0V340M880 0V340M960 0V340M1040 0V340M1120 0V340M1200 0V340"/>
+  </g>
+
+  <!-- ── Figura: circuito autopoiético ─────────────────────────────────────
+       Tres arcos que no se cierran por sí solos, pero que juntos forman un
+       recorrido continuo: cada uno entrega al siguiente y el último devuelve
+       al primero. Es la imagen de un sistema que se produce a sí mismo, y a la
+       vez la del momento dialéctico que se conserva al superarse. -->
+  <g transform="translate(1035 170)">
+    <circle r="118" fill="none" stroke="#7dd3fc" stroke-opacity="0.10" stroke-width="1"/>
+    <circle r="86"  fill="none" stroke="#c4b5fd" stroke-opacity="0.08" stroke-width="1"/>
+
+    <g fill="none" stroke="url(#lazo)" stroke-width="2.4" stroke-linecap="round">
+      <path d="M0 -100 A100 100 0 0 1 86.6 50"/>
+      <path d="M86.6 50 A100 100 0 0 1 -86.6 50" transform="rotate(12)"/>
+      <path d="M-86.6 50 A100 100 0 0 1 0 -100" transform="rotate(24)"/>
+    </g>
+
+    <!-- Nodos: los tres momentos. -->
+    <g fill="#e0f2fe">
+      <circle cx="0"     cy="-100" r="5.5"/>
+      <circle cx="86.6"  cy="50"   r="5.5" transform="rotate(12)"/>
+      <circle cx="-86.6" cy="50"   r="5.5" transform="rotate(24)"/>
+    </g>
+    <g fill="none" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.2">
+      <circle cx="0"     cy="-100" r="11"/>
+      <circle cx="86.6"  cy="50"   r="11" transform="rotate(12)"/>
+      <circle cx="-86.6" cy="50"   r="11" transform="rotate(24)"/>
+    </g>
+
+    <circle r="3.2" fill="#f0abfc" fill-opacity="0.9"/>
+  </g>
+
+  <!-- ── Tipografía ───────────────────────────────────────────────────── -->
+  <g font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif">
+    <text x="96" y="132" font-size="76" font-weight="700" fill="url(#tinta)" letter-spacing="-1.5">SirHegel</text>
+  </g>
+
+  <path d="M100 170H470" stroke="url(#filo)" stroke-width="2.6" stroke-linecap="round"/>
+
+  <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <text x="100" y="212" font-size="21" fill="#cbd5f5" letter-spacing="0.4">
+      Economista · Analista de datos · Filósofo
+    </text>
+    <text x="100" y="252" font-size="16.5" fill="#94a3d8" letter-spacing="0.2">
+      Teoría económica heterodoxa, sistemas de inteligencia artificial
+    </text>
+    <text x="100" y="278" font-size="16.5" fill="#94a3d8" letter-spacing="0.2">
+      y la pregunta de cómo un sistema llega a producirse a sí mismo.
+    </text>
+  </g>
+
+  <g font-family="Georgia, 'Times New Roman', serif" font-style="italic">
+    <text x="100" y="316" font-size="14.5" fill="#7c86b8">
+      «Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung ihren Flug.»
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+# ── Nunca subir: credenciales ni datos locales ──
+.env
+.env.*
+*.pem
+*.key
+**/*credential*
+**/*credencial*
+**/*secret*
+**/*secreto*
+**/*contrasena*
+**/*password*
+
+# ── Ruido ──
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
