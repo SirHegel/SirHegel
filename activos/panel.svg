@@ -62,7 +62,7 @@
       <stop offset="0.55" stop-color="#FFF3DA" stop-opacity="0.85"/>
       <stop offset="1"   stop-color="#FFFFFF" stop-opacity="0"/>
       <animateTransform attributeName="gradientTransform" type="translate"
-                        values="0 0; 1740 0; 1740 0" dur="7s" keyTimes="0;0.55;1"
+                        values="0 0; 1740 0; 1740 0" dur="5s" keyTimes="0;0.6;1"
                         repeatCount="indefinite"/>
     </linearGradient>
 
@@ -79,6 +79,18 @@
       <stop offset="0"    stop-color="#FFCE90" stop-opacity="0.34"/>
       <stop offset="0.35" stop-color="#F0A14B" stop-opacity="0.14"/>
       <stop offset="1"    stop-color="#F0A14B" stop-opacity="0"/>
+    </linearGradient>
+
+
+    <!-- Faro: una banda de luz que cruza el panel entero cada 9 s. Es el
+         movimiento mas visible de la composicion y el que da la sensacion de
+         que el plano esta vivo. -->
+    <linearGradient id="faro" gradientUnits="userSpaceOnUse" x1="-520" y1="0" x2="-160" y2="520">
+      <stop offset="0"    stop-color="#FFE9C4" stop-opacity="0"/>
+      <stop offset="0.5"  stop-color="#FFE9C4" stop-opacity="0.13"/>
+      <stop offset="1"    stop-color="#FFE9C4" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="0 0; 2200 0" dur="9s" repeatCount="indefinite"/>
     </linearGradient>
 
     <!-- Resplandor para el neon -->
@@ -164,17 +176,60 @@
             fill="none" stroke="#3FBF87" stroke-opacity="0.45" stroke-width="1.2"/>
 
       <g fill="#5BF0AE" filter="url(#resplandor)">
-        <circle cx="718"  cy="292" r="2.6"><animate attributeName="r" values="2.2;3.6;2.2" dur="3.2s" repeatCount="indefinite"/></circle>
-        <circle cx="826"  cy="276" r="2.6"><animate attributeName="r" values="3.4;2.2;3.4" dur="4.1s" repeatCount="indefinite"/></circle>
-        <circle cx="934"  cy="286" r="2.6"><animate attributeName="r" values="2.4;3.8;2.4" dur="2.7s" repeatCount="indefinite"/></circle>
-        <circle cx="1042" cy="266" r="2.6"><animate attributeName="r" values="3.6;2.3;3.6" dur="3.8s" repeatCount="indefinite"/></circle>
-        <circle cx="1150" cy="290" r="2.6"><animate attributeName="r" values="2.3;3.5;2.3" dur="4.6s" repeatCount="indefinite"/></circle>
+        <circle cx="718"  cy="292" r="2.6"><animate attributeName="r" values="2;6;2" dur="2.4s" repeatCount="indefinite"/></circle>
+        <circle cx="826"  cy="276" r="2.6"><animate attributeName="r" values="6;2;6" dur="2.9s" repeatCount="indefinite"/></circle>
+        <circle cx="934"  cy="286" r="2.6"><animate attributeName="r" values="2;5.6;2" dur="2.1s" repeatCount="indefinite"/></circle>
+        <circle cx="1042" cy="266" r="2.6"><animate attributeName="r" values="5.8;2;5.8" dur="3.3s" repeatCount="indefinite"/></circle>
+        <circle cx="1150" cy="290" r="2.6"><animate attributeName="r" values="2;5.4;2" dur="2.6s" repeatCount="indefinite"/></circle>
+      </g>
+
+
+      <!-- Pulsos de datos: recorren el cable de poste a poste. No es adorno,
+           es lo que el diagrama dice en palabras — trabajo que atraviesa el
+           plano de control. Tres pulsos escalonados sobre la misma ruta. -->
+      <g fill="#B9FFE0" filter="url(#resplandor)">
+        <circle r="3.4" opacity="0">
+          <animateMotion dur="4s" repeatCount="indefinite"
+                         path="M718 292 L826 276 L934 286 L1042 266 L1150 290"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="3" opacity="0">
+          <animateMotion dur="4s" begin="1.3s" repeatCount="indefinite"
+                         path="M718 292 L826 276 L934 286 L1042 266 L1150 290"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4s" begin="1.3s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="2.6" opacity="0">
+          <animateMotion dur="4s" begin="2.6s" repeatCount="indefinite"
+                         path="M718 292 L826 276 L934 286 L1042 266 L1150 290"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
       </g>
 
       <g font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="9.5"
          fill="#5BF0AE" fill-opacity="0.62" letter-spacing="3">
         <text x="718" y="242">CONTROL PLANE · N TEAMS</text>
       </g>
+    </g>
+
+
+    <!-- Polvo en suspension: deriva lenta hacia la derecha. Da profundidad de
+         aire entre el observador y el horizonte. -->
+    <g fill="#FFE9C4" opacity="0.5">
+      <circle cx="200" cy="300" r="1.3">
+        <animate attributeName="cx" values="140;1180" dur="26s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="300;272;300" dur="26s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.55;0.55;0" keyTimes="0;0.1;0.85;1" dur="26s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="400" cy="216" r="1">
+        <animate attributeName="cx" values="60;1220" dur="34s" begin="5s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="216;242;216" dur="34s" begin="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.4;0.4;0" keyTimes="0;0.1;0.85;1" dur="34s" begin="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="700" cy="330" r="1.5">
+        <animate attributeName="cx" values="200;1260" dur="30s" begin="11s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="330;306;330" dur="30s" begin="11s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.5;0.5;0" keyTimes="0;0.1;0.85;1" dur="30s" begin="11s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
     <!-- 8 · Rejilla suiza de doce columnas -->
@@ -220,6 +275,9 @@
         An agent is not a company. The difference is categorial, not quantitative.
       </text>
     </g>
+
+    <!-- 9b · El faro pasa por encima de la escena y de la tipografia -->
+    <rect width="1280" height="520" fill="url(#faro)"/>
 
     <!-- 10 · Grano de pelicula, encima de todo -->
     <rect width="1280" height="520" filter="url(#grano)" opacity="0.05"
