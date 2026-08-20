@@ -105,15 +105,16 @@ forma que se critica. Quien sólo representa, describe. Quien reproduce, explica
 
 ## Repositorios
 
-Ordenados por rigor verificable, no por antigüedad. Las cifras son líneas de código
-fuente frente a líneas de prueba, medidas sobre los archivos versionados.
+Ordenados por dificultad técnica medida sobre el código, no por antigüedad ni por
+tamaño. Las cifras son líneas de fuente frente a líneas de prueba.
 
-| Repositorio | Qué es | Fuente / prueba |
+| Repositorio | Por qué está aquí | Fuente / prueba |
 |---|---|---|
-| **[orquesta-ia](https://github.com/SirHegel/orquesta-ia)** | Orquestador local multi-cuenta. Routing por tipo de tarea, contabilidad por ventana de cupo, detección de límite y auditoría cruzada entre modelos. Antecedente público de CAUCE. | 2 819 / 769 · `SECURITY.md` + escáner |
-| **[colmat-x-automation](https://github.com/SirHegel/colmat-x-automation)** | Publicación automatizada con doble seguro contra envíos accidentales y estado transaccional. | 2 112 / **1 294** |
-| **[bloquitos](https://github.com/SirHegel/bloquitos)** · [jugar](https://sirhegel.github.io/bloquitos/) | Motor de juego sin dependencias: base de datos local, modo daltónico, aplicación de escritorio y funcionamiento sin conexión verificado. | 2 940 / 740 · 2 flujos de CI |
-| **[sincategorematico-bot](https://github.com/SirHegel/sincategorematico-bot)** | Servicio local de bajo consumo para flujo de noticias y publicación. El nombre viene de la lógica medieval: sincategoremático es el término que no significa por sí solo, sino por su función en la proposición. | 1 133 / 134 |
+| **[automatizacion-evidencias-adso](https://github.com/SirHegel/automatizacion-evidencias-adso)** | Motor de 1 133 líneas que regenera, valida y audita entregables. Verifica documentos ofimáticos descomprimiéndolos y leyendo su XML, exporta y comprueba PDF, y corre una **auditoría de privacidad** sobre cada parte extraída de cada archivo. La integración continua bloquea el envío si encuentra un riesgo. | 8 405 / 341 · CI que rechaza |
+| **[orquesta-ia](https://github.com/SirHegel/orquesta-ia)** | Orquestador local multi-cuenta: routing por tipo de tarea, contabilidad por ventana de cupo, detección de límite y auditoría cruzada entre modelos. Antecedente público de CAUCE. | 2 819 / 769 · `SECURITY.md` + escáner |
+| **[colmat-x-automation](https://github.com/SirHegel/colmat-x-automation)** | La mayor disciplina de pruebas del conjunto: **0,61 líneas de prueba por línea de código**. Estado transaccional, OAuth 1.0a y doble seguro contra publicaciones accidentales. | 2 112 / **1 294** |
+| **[sincategorematico-bot](https://github.com/SirHegel/sincategorematico-bot)** | Tres superficies sobre un mismo núcleo: bot de Telegram, panel HTTP local y aplicación de escritorio. Protocolo de reclamación de propiedad con SHA-256 y expiración; el token vive con permisos `0600` fuera del repositorio. | 1 133 / 134 |
+| **[bloquitos](https://github.com/SirHegel/bloquitos)** · [jugar](https://sirhegel.github.io/bloquitos/) | La superficie de entrega más amplia: navegador, aplicación instalable, ejecutable de escritorio y base de datos local, sin una sola dependencia externa. | 2 940 / 740 · 60 pruebas |
 
 <br>
 
