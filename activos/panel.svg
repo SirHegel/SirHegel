@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520"
+     role="img" aria-label="SirHegel — economics, agent systems, philosophy">
+  <title>SirHegel</title>
+
+  <!--
+    PANEL DE CABECERA
+
+    Estructura: rejilla suiza de doce columnas (Muller-Brockmann). La tipografia
+    se alinea a la primera columna y la jerarquia se construye por escala
+    modular de razon 1,333 (cuarta justa), no por adorno:
+
+        92 px  nombre        serif,  interletraje -3,5
+        12 px  credencial    sans,   interletraje +6, versalitas
+        19 px  entrada       sans
+        17 px  apoyo         sans
+        13,5   pie           serif italica
+
+    El salto de 92 a 12 es deliberado: el contraste extremo entre display y
+    versalita es lo que sostiene la pagina sin necesidad de mas recursos.
+
+    Color y luz: fotografia de Robby Muller en Paris, Texas. Cielo de azul de
+    noche a ambar de atardecer, tierra en sombra, y el verde neon de los
+    carteles. Sobre eso, tres capas que se mueven: los rayos volumetricos, el
+    latido de los nodos y un barrido de luz que recorre el nombre.
+
+    El grano de pelicula (feTurbulence) va encima de todo, al 5%: es lo que
+    impide que los degradados se vean digitales.
+  -->
+
+  <defs>
+    <linearGradient id="cielo" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="352">
+      <stop offset="0"    stop-color="#070B14"/>
+      <stop offset="0.30" stop-color="#0F2334"/>
+      <stop offset="0.62" stop-color="#2C4A5E"/>
+      <stop offset="0.86" stop-color="#7A5A46"/>
+      <stop offset="1"    stop-color="#C97A3C"/>
+    </linearGradient>
+
+    <linearGradient id="tierra" gradientUnits="userSpaceOnUse" x1="0" y1="352" x2="0" y2="520">
+      <stop offset="0"   stop-color="#3A2318"/>
+      <stop offset="0.5" stop-color="#1A100C"/>
+      <stop offset="1"   stop-color="#0B0705"/>
+    </linearGradient>
+
+    <radialGradient id="sol" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"    stop-color="#FFD9A0" stop-opacity="0.85"/>
+      <stop offset="0.22" stop-color="#F0A14B" stop-opacity="0.45"/>
+      <stop offset="0.55" stop-color="#C4562C" stop-opacity="0.18"/>
+      <stop offset="1"    stop-color="#C4562C" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="tituloBase" gradientUnits="userSpaceOnUse" x1="96" y1="150" x2="760" y2="250">
+      <stop offset="0" stop-color="#FBF6EC"/>
+      <stop offset="1" stop-color="#CBBBA2"/>
+    </linearGradient>
+
+    <!-- Barrido: el degradado se desplaza sobre el nombre, como el reflejo de
+         un faro que pasa. Es lo unico que se mueve en la tipografia. -->
+    <linearGradient id="barrido" gradientUnits="userSpaceOnUse" x1="-380" y1="0" x2="-120" y2="0">
+      <stop offset="0"   stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#FFF3DA" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#FFF3DA" stop-opacity="0.85"/>
+      <stop offset="1"   stop-color="#FFFFFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="0 0; 1740 0; 1740 0" dur="7s" keyTimes="0;0.55;1"
+                        repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="filete" gradientUnits="userSpaceOnUse" x1="96" y1="0" x2="640" y2="0">
+      <stop offset="0"   stop-color="#C4442F"/>
+      <stop offset="0.55" stop-color="#E8A44C" stop-opacity="0.65"/>
+      <stop offset="1"   stop-color="#E8A44C" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Nace luminoso en el sol (abajo) y se disipa al subir. userSpaceOnUse
+         porque los rayos son poligonos finos y la caja delimitadora deforma
+         el degradado. -->
+    <linearGradient id="rayo" gradientUnits="userSpaceOnUse" x1="0" y1="352" x2="0" y2="60">
+      <stop offset="0"    stop-color="#FFCE90" stop-opacity="0.34"/>
+      <stop offset="0.35" stop-color="#F0A14B" stop-opacity="0.14"/>
+      <stop offset="1"    stop-color="#F0A14B" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Resplandor para el neon -->
+    <filter id="resplandor" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="4" result="b1"/>
+      <feGaussianBlur stdDeviation="10" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="resplandorSuave" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Grano de pelicula -->
+    <filter id="grano" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+    </filter>
+
+    <clipPath id="marco"><rect width="1280" height="520" rx="4"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#marco)">
+
+    <!-- 1 · Cielo y tierra -->
+    <rect width="1280" height="352" fill="url(#cielo)"/>
+    <rect y="352" width="1280" height="168" fill="url(#tierra)"/>
+
+    <!-- 2 · Estrellas, con parpadeo escalonado -->
+    <g fill="#FBF6EC">
+      <circle cx="140" cy="46"  r="1.1"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="4.1s" repeatCount="indefinite"/></circle>
+      <circle cx="318" cy="82"  r="0.9"><animate attributeName="opacity" values="0.6;0.12;0.6"  dur="5.3s" repeatCount="indefinite"/></circle>
+      <circle cx="502" cy="38"  r="1.2"><animate attributeName="opacity" values="0.2;0.75;0.2"  dur="6.7s" repeatCount="indefinite"/></circle>
+      <circle cx="676" cy="94"  r="0.8"><animate attributeName="opacity" values="0.7;0.2;0.7"   dur="3.9s" repeatCount="indefinite"/></circle>
+      <circle cx="874" cy="52"  r="1.0"><animate attributeName="opacity" values="0.18;0.7;0.18" dur="5.9s" repeatCount="indefinite"/></circle>
+      <circle cx="1046" cy="88" r="1.1"><animate attributeName="opacity" values="0.5;0.15;0.5"  dur="4.6s" repeatCount="indefinite"/></circle>
+      <circle cx="1188" cy="44" r="0.9"><animate attributeName="opacity" values="0.25;0.8;0.25" dur="7.2s" repeatCount="indefinite"/></circle>
+      <circle cx="228" cy="118" r="0.8"><animate attributeName="opacity" values="0.6;0.18;0.6"  dur="6.1s" repeatCount="indefinite"/></circle>
+      <circle cx="960" cy="128" r="0.9"><animate attributeName="opacity" values="0.2;0.65;0.2"  dur="4.8s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- 3 · Rayos volumetricos desde el sol -->
+    <g opacity="0.85">
+      <g transform="translate(1010 352)">
+        <polygon points="0,0 -150,-300 -108,-300" fill="url(#rayo)">
+          <animate attributeName="opacity" values="0.35;0.85;0.35" dur="11s" repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="0,0 -54,-300 -16,-300" fill="url(#rayo)">
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="9s" repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="0,0 46,-300 92,-300" fill="url(#rayo)">
+          <animate attributeName="opacity" values="0.4;0.9;0.4" dur="13s" repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="0,0 140,-300 190,-300" fill="url(#rayo)">
+          <animate attributeName="opacity" values="0.7;0.25;0.7" dur="10s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+    </g>
+
+    <!-- 4 · El sol, respirando -->
+    <ellipse cx="1010" cy="352" rx="330" ry="168" fill="url(#sol)">
+      <animate attributeName="rx" values="330;352;330" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="14s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- 5 · Mesa: la silueta del fondo -->
+    <path d="M0 352 L0 330 L86 330 L124 314 L232 314 L264 330 L392 330 L392 352 Z"
+          fill="#0B0F16" opacity="0.55"/>
+    <path d="M1136 352 L1136 322 L1180 322 L1206 306 L1280 306 L1280 352 Z"
+          fill="#0B0F16" opacity="0.45"/>
+
+    <!-- 6 · Linea del horizonte -->
+    <path d="M0 352H1280" stroke="#FFC98A" stroke-opacity="0.55" stroke-width="1"/>
+
+    <!-- 7 · Postes con nodos de neon -->
+    <g>
+      <path d="M718 352V292M826 352V276M934 352V286M1042 352V266M1150 352V290"
+            stroke="#080C10" stroke-opacity="0.85" stroke-width="2.4"/>
+      <path d="M718 292 L826 276 L934 286 L1042 266 L1150 290"
+            fill="none" stroke="#3FBF87" stroke-opacity="0.45" stroke-width="1.2"/>
+
+      <g fill="#5BF0AE" filter="url(#resplandor)">
+        <circle cx="718"  cy="292" r="2.6"><animate attributeName="r" values="2.2;3.6;2.2" dur="3.2s" repeatCount="indefinite"/></circle>
+        <circle cx="826"  cy="276" r="2.6"><animate attributeName="r" values="3.4;2.2;3.4" dur="4.1s" repeatCount="indefinite"/></circle>
+        <circle cx="934"  cy="286" r="2.6"><animate attributeName="r" values="2.4;3.8;2.4" dur="2.7s" repeatCount="indefinite"/></circle>
+        <circle cx="1042" cy="266" r="2.6"><animate attributeName="r" values="3.6;2.3;3.6" dur="3.8s" repeatCount="indefinite"/></circle>
+        <circle cx="1150" cy="290" r="2.6"><animate attributeName="r" values="2.3;3.5;2.3" dur="4.6s" repeatCount="indefinite"/></circle>
+      </g>
+
+      <g font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="9.5"
+         fill="#5BF0AE" fill-opacity="0.62" letter-spacing="3">
+        <text x="718" y="242">CONTROL PLANE · N TEAMS</text>
+      </g>
+    </g>
+
+    <!-- 8 · Rejilla suiza de doce columnas -->
+    <g stroke="#FBF6EC" stroke-opacity="0.042" stroke-width="1">
+      <path d="M96 0V520M192 0V520M288 0V520M384 0V520M480 0V520M576 0V520M672 0V520M768 0V520M864 0V520M960 0V520M1056 0V520M1152 0V520"/>
+    </g>
+    <g stroke="#FBF6EC" stroke-opacity="0.055" stroke-width="1">
+      <path d="M0 40H1280M0 480H1280"/>
+    </g>
+
+    <!-- ═══ 9 · TIPOGRAFIA ═══ -->
+
+    <!-- Display 92 px · el resplandor va detras, no sobre la letra -->
+    <g font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif"
+       font-size="92" font-weight="700" letter-spacing="-3.5">
+      <text x="96" y="212" fill="#C97A3C" fill-opacity="0.28" filter="url(#resplandorSuave)">SirHegel</text>
+      <text x="96" y="212" fill="url(#tituloBase)">SirHegel</text>
+      <text x="96" y="212" fill="url(#barrido)">SirHegel</text>
+    </g>
+
+    <path d="M96 244H640" stroke="url(#filete)" stroke-width="2.2"/>
+
+    <!-- Credencial 12 px · versalitas muy espaciadas -->
+    <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+      <text x="96" y="280" font-size="12" fill="#E8A44C" letter-spacing="6">
+        ECONOMICS · AGENT SYSTEMS · PHILOSOPHY
+      </text>
+    </g>
+
+    <!-- Entrada 19 px y apoyo 17 px -->
+    <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+      <text x="96" y="404" font-size="19" fill="#F0E4CE">
+        I build the control plane that turns scattered agents into an operating company.
+      </text>
+      <text x="96" y="434" font-size="17" fill="#A2937F">
+        Philosophical materialism, critique of political economy, Hegelian logic.
+      </text>
+    </g>
+
+    <!-- Pie 13,5 px · serif italica -->
+    <g font-family="Georgia, 'Times New Roman', serif" font-style="italic">
+      <text x="96" y="470" font-size="13.5" fill="#7A6D5E">
+        An agent is not a company. The difference is categorial, not quantitative.
+      </text>
+    </g>
+
+    <!-- 10 · Grano de pelicula, encima de todo -->
+    <rect width="1280" height="520" filter="url(#grano)" opacity="0.05"
+          style="mix-blend-mode:overlay"/>
+  </g>
+</svg>

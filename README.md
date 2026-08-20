@@ -1,120 +1,121 @@
-<img src="activos/cabecera-horizonte.svg" alt="SirHegel — economía, sistemas de agentes, filosofía" width="100%">
+<img src="activos/panel.svg" alt="SirHegel — economics, agent systems, philosophy" width="100%">
 
 <br>
 
-Economista y analista de datos. Construyo, junto a **[Steven Vallejo Ortiz](https://www.stevenvallejo.com/es)**,
-el sistema que convierte agentes de inteligencia artificial dispersos en una empresa
-que opera.
+Economist and data analyst. Together with **[Steven Vallejo Ortiz](https://www.stevenvallejo.com/es)**
+I build the system that turns scattered AI agents into a company that actually operates.
 
-Trabajo con tres materiales que la división académica mantiene separados sin razón:
-la crítica de la economía política, la arquitectura de sistemas multiagente, y la
-lógica que permite decir cuándo un conjunto de partes constituye una totalidad y
-cuándo no pasa de agregado. No son tres campos. Son un mismo problema abordado con
-tres instrumentos.
+I work with three materials that academic convention keeps apart for no good reason:
+the critique of political economy, the architecture of multi-agent systems, and the
+logic that lets you say when a set of parts constitutes a whole and when it remains a
+heap. These are not three fields. They are one problem approached with three
+instruments.
 
 <br>
 
 ## CAUCE V3
 
-**[humanizar.tech](https://www.humanizar.tech/)** — *empresas de desarrollo hechas con agentes*
+**[humanizar.tech](https://www.humanizar.tech/)** — *development companies, built from agents*
 
-Un agente no es una empresa. La afirmación no es retórica ni cuantitativa: es
-categorial. Sumar agentes no produce una empresa del mismo modo que sumar monedas no
-produce capital, ni sumar individuos produce una sociedad política. Lo que constituye
-a la empresa es una forma determinada de organización —división del trabajo,
-imputación de responsabilidad, gobierno de la capacidad, contabilidad del gasto—, y
-esa forma no está contenida en ninguna de sus partes.
+An agent is not a company. The claim is neither rhetorical nor quantitative: it is
+categorial. Adding agents no more produces a company than adding coins produces
+capital, or adding individuals produces a body politic. What constitutes a company is
+a determinate form of organization — division of labour, attribution of
+responsibility, governance of capacity, accounting for spend — and that form is
+contained in none of its parts.
 
-El error contrario tiene nombre. Es la sustantivación de lo que sólo existe como
-relación: tratar una estructura como si fuera una cosa. Gustavo Bueno lo desmontó en
-el *Ensayo sobre las categorías de la economía política*; Luis Carlos Martín Jiménez
-lo lleva hasta el final en **[*El mito del capitalismo*](https://www.helicon.es/pen/7848620.htm)**,
-donde muestra que «capitalismo» nombra un mito precisamente por operar esa
-sustantivación. El mercado actual de la inteligencia artificial repite la operación
-en su propio terreno: llama «agente» a un proceso y espera que de su multiplicación
-brote una organización.
+The opposite error has a name. It is the hypostatizing of what exists only as a
+relation: treating a structure as though it were a thing. Gustavo Bueno dismantled it
+in *Ensayo sobre las categorías de la economía política*; Luis Carlos Martín Jiménez
+carries it through in **[*El mito del capitalismo*](https://www.helicon.es/pen/7848620.htm)**,
+where he shows that "capitalism" names a myth precisely because it performs that
+hypostasis. Today's AI market repeats the operation on its own ground: it calls a
+process an "agent" and expects an organization to emerge from multiplying it.
 
-CAUCE V3 parte de la negación de ese supuesto. No orquesta agentes que ya existen:
-**produce los equipos** y les impone la forma que los hace responsables. De dos a N
-equipos especializados, gobernados desde un solo plano de control.
+CAUCE V3 begins by denying that premise. It does not orchestrate agents that already
+exist — **it produces the teams** and imposes the form that makes them accountable.
+From two to N specialized teams, governed from a single control plane.
 
-<img src="activos/arquitectura.svg" alt="Arquitectura de CAUCE V3" width="100%">
+<img src="activos/arquitectura.svg" alt="CAUCE V3 architecture" width="100%">
 
-Lo que hay dentro, en términos operativos:
+What is inside, in operational terms:
 
 | | |
 |---|---|
-| **Routing durable** | Reservas que vencen y redistribución automática del trabajo cuando un proceso cae. Ninguna tarea queda huérfana porque su ejecutor haya muerto. |
-| **Cartas muertas** | Las operaciones fallidas conservan el cuerpo completo del mensaje. Un fallo que no deja rastro no es un fallo: es una pérdida silenciosa. |
-| **Multi-harness** | Cuatro motores distintos bajo un único contrato de protocolo. El motor es intercambiable; el contrato, no. |
-| **Protocolos tipados** | Campos distintos para respuesta, delegación, notificación y artefacto. Un tipo confundido es una decisión que nadie tomó. |
-| **Identidad y aislamiento** | Certificado por cliente y separación en la capa de almacenamiento. Los canales no se hablan entre inquilinos, y no por olvido: por diseño. |
-| **Gates humanos** | Despliegue, acceso a secretos, borrado y gasto exigen una persona. El sistema no decide por vos. |
+| **Durable routing** | Expiring reservations and automatic redistribution of work when a process dies. No task is orphaned because its executor went down. |
+| **Dead letters** | Failed operations retain the complete message body. A failure that leaves no trace is not a failure — it is a silent loss. |
+| **Multi-harness** | Four distinct engines under a single protocol contract. The engine is interchangeable; the contract is not. |
+| **Typed protocols** | Separate fields for response, delegation, notification and artifact. A confused type is a decision nobody made. |
+| **Identity and isolation** | Per-client certificates and separation at the storage layer. Channels do not talk across tenants — not by oversight, by design. |
+| **Human gates** | Deployment, secret access, deletion and spend each require a person. The system does not decide for you. |
 
-El método es el que Juan Íñigo Carrera exige a cualquier crítica que se pretenda
-seria: no representar el proceso desde fuera, sino **reproducir su movimiento**. Un
-plano de control no describe la organización — la ejerce, y por eso puede auditarse.
+The method is the one Juan Íñigo Carrera demands of any critique that means to be
+serious: not to represent the process from outside, but to **reproduce its movement**.
+A control plane does not describe the organization — it exercises it, which is why it
+can be audited.
 
-Y la arquitectura es hegeliana en un sentido preciso, no decorativo. No se presupone
-la empresa como dato: se parte de la determinación mínima —un pedido en un canal— y
-se la deja desarrollarse a través de sus mediaciones hasta el resultado concreto.
-Es la exigencia que **Stephen Houlgate** defiende en *The Opening of Hegel's Logic*:
-un comienzo sin presupuestos, cuyas categorías no se importan desde fuera sino que
-se generan en el propio desarrollo.
-
-<br>
-
-## Protocolos de seguridad
-
-La seguridad no es una capa que se añade cuando el sistema ya funciona. Es la
-restricción que decide qué puede hacer el sistema, y por tanto es anterior.
-
-**Ninguna credencial entra en un repositorio.** Cada proyecto lleva dos modos: la
-versión pública, sin secretos, y la configuración real, que no sale del equipo. Donde
-importa, un escáner corre antes de cada commit y aborta si detecta un patrón de
-credencial o una ruta local. Está en `orquesta-ia` y en `bloquitos`, y la integración
-continua rechaza el envío si algo pasa.
-
-**Borrar un secreto de un archivo no lo elimina.** Queda en el historial. La única
-reparación válida es reescribir el historial y **rotar la credencial**. Lo segundo no
-es opcional; lo primero sin lo segundo es teatro.
-
-**Lo que afirmo está probado.** Si un sistema declara funcionar sin conexión, hay una
-prueba que corta la red y lo verifica. Si declara no corromper su estado, hay una
-simulación de miles de ciclos comprobando el invariante. Una afirmación sin prueba
-que la respalde es una promesa, y las promesas no se despliegan.
+And the architecture is Hegelian in a precise, non-decorative sense. The company is
+not presupposed as given: it starts from the minimal determination — a request in a
+channel — and is left to develop through its mediations into the concrete result.
+This is the requirement **Stephen Houlgate** defends in *The Opening of Hegel's Logic*:
+a presuppositionless beginning, whose categories are not imported from outside but
+generated in the development itself.
 
 <br>
 
-## Economía
+## Security protocols
 
-Trabajo la teoría económica desde la tradición que se niega a tomar el equilibrio
-como punto de partida, porque el equilibrio no es un hecho: es un supuesto que
-decide de antemano lo que el modelo podrá ver.
+Security is not a layer added once the system already works. It is the constraint
+that decides what the system may do, and therefore comes first.
 
-De la Escuela de Oviedo tomo el aparato categorial: la economía política no se
-ordena por magnitudes sino por categorías, y confundir el plano de las magnitudes con
-el de las categorías produce mitos operativos —«el capitalismo», «el mercado», «la
-tecnología»— que funcionan como sujetos de oraciones donde no hay ningún sujeto.
+**No credential enters a repository.** Every project ships in two modes: the public
+version, without secrets, and the real configuration, which never leaves the machine.
+Where it matters, a scanner runs before every commit and aborts on a credential
+pattern or a local path. It is in `orquesta-ia` and in `bloquitos`, and continuous
+integration rejects the push if anything slips through.
 
-De Juan Íñigo Carrera tomo la exigencia de método: la crítica no consiste en oponer
-un modelo a otro, sino en reproducir en el pensamiento el movimiento real de la
-forma que se critica. Quien sólo representa, describe. Quien reproduce, explica.
+**Deleting a secret from a file does not remove it.** It stays in history. The only
+valid repair is to rewrite history **and rotate the credential**. The second is not
+optional; the first without the second is theatre.
+
+**What I claim is tested.** If a system says it works offline, a test cuts the network
+and verifies it. If it says it will not corrupt its state, a simulation of thousands
+of cycles checks the invariant. A claim with no test behind it is a promise, and
+promises do not deploy.
 
 <br>
 
-## Repositorios
+## Economics
 
-Ordenados por dificultad técnica medida sobre el código, no por antigüedad ni por
-tamaño. Las cifras son líneas de fuente frente a líneas de prueba.
+I work economic theory from the tradition that refuses to take equilibrium as its
+starting point, because equilibrium is not a fact: it is an assumption that decides
+in advance what the model will be able to see.
 
-| Repositorio | Por qué está aquí | Fuente / prueba |
+From the School of Oviedo I take the categorial apparatus: political economy is not
+ordered by magnitudes but by categories, and confusing the plane of magnitudes with
+the plane of categories produces operative myths — "capitalism", "the market",
+"technology" — that function as the subjects of sentences in which there is no
+subject at all.
+
+From Juan Íñigo Carrera I take the demand on method: critique does not consist in
+setting one model against another, but in reproducing in thought the real movement of
+the form under critique. Whoever only represents, describes. Whoever reproduces,
+explains.
+
+<br>
+
+## Repositories
+
+Ordered by technical difficulty measured against the code, not by age or size.
+Figures are lines of source against lines of test.
+
+| Repository | Why it is here | Source / test |
 |---|---|---|
-| **[automatizacion-evidencias-adso](https://github.com/SirHegel/automatizacion-evidencias-adso)** | Motor de 1 133 líneas que regenera, valida y audita entregables. Verifica documentos ofimáticos descomprimiéndolos y leyendo su XML, exporta y comprueba PDF, y corre una **auditoría de privacidad** sobre cada parte extraída de cada archivo. La integración continua bloquea el envío si encuentra un riesgo. | 8 405 / 341 · CI que rechaza |
-| **[orquesta-ia](https://github.com/SirHegel/orquesta-ia)** | Orquestador local multi-cuenta: routing por tipo de tarea, contabilidad por ventana de cupo, detección de límite y auditoría cruzada entre modelos. Antecedente público de CAUCE. | 2 819 / 769 · `SECURITY.md` + escáner |
-| **[colmat-x-automation](https://github.com/SirHegel/colmat-x-automation)** | La mayor disciplina de pruebas del conjunto: **0,61 líneas de prueba por línea de código**. Estado transaccional, OAuth 1.0a y doble seguro contra publicaciones accidentales. | 2 112 / **1 294** |
-| **[sincategorematico-bot](https://github.com/SirHegel/sincategorematico-bot)** | Tres superficies sobre un mismo núcleo: bot de Telegram, panel HTTP local y aplicación de escritorio. Protocolo de reclamación de propiedad con SHA-256 y expiración; el token vive con permisos `0600` fuera del repositorio. | 1 133 / 134 |
-| **[bloquitos](https://github.com/SirHegel/bloquitos)** · [jugar](https://sirhegel.github.io/bloquitos/) | La superficie de entrega más amplia: navegador, aplicación instalable, ejecutable de escritorio y base de datos local, sin una sola dependencia externa. | 2 940 / 740 · 60 pruebas |
+| **[automatizacion-evidencias-adso](https://github.com/SirHegel/automatizacion-evidencias-adso)** | A 1,133-line engine that regenerates, validates and audits deliverables. It verifies office documents by unzipping them and reading their XML, exports and checks PDFs, and runs a **privacy audit** over every extracted part of every file. CI blocks the push when it finds a risk. | 8,405 / 341 · blocking CI |
+| **[orquesta-ia](https://github.com/SirHegel/orquesta-ia)** | Local multi-account orchestrator: routing by task type, accounting per quota window, limit detection and cross-auditing between models. Public antecedent of CAUCE. | 2,819 / 769 · `SECURITY.md` + scanner |
+| **[colmat-x-automation](https://github.com/SirHegel/colmat-x-automation)** | The strongest test discipline of the set: **0.61 lines of test per line of code**. Transactional state, OAuth 1.0a and a double safety against accidental publication. | 2,112 / **1,294** |
+| **[sincategorematico-bot](https://github.com/SirHegel/sincategorematico-bot)** | Three surfaces over one core: Telegram bot, local HTTP dashboard and desktop application. Ownership-claim protocol with SHA-256 and expiry; the token lives at `0600` outside the repository. | 1,133 / 134 |
+| **[bloquitos](https://github.com/SirHegel/bloquitos)** · [play](https://sirhegel.github.io/bloquitos/) | The widest delivery surface: browser, installable app, desktop executable and local database, without a single external dependency. | 2,940 / 740 · 60 tests |
 
 <br>
 
@@ -122,5 +123,5 @@ tamaño. Las cifras son líneas de fuente frente a líneas de prueba.
 
 <p align="center">
   <em>«Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung ihren Flug.»</em><br>
-  <sub>Hegel, prefacio a los <em>Principios de la filosofía del derecho</em></sub>
+  <sub>Hegel, preface to the <em>Elements of the Philosophy of Right</em></sub>
 </p>
