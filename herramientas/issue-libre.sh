@@ -25,12 +25,22 @@ mencion=$(gh api "search/issues?q=repo:$repo+is:pr+is:open+$num" \
 suyos=$(gh api "search/issues?q=repo:$repo+is:pr+is:open+author:$autor" \
   --jq '.items[] | "  #\(.number) \(.created_at[0:10]) \(.title[0:52])"' 2>/dev/null | head -6)
 
+# 4. Reclamo en prosa: no hay PR todavía pero alguien dice que lo está haciendo.
+#    jsonschema#1536 no tenía PR y el cuerpo decía "I have a working patch and tests".
+cuerpo=$(jq -r '.body // ""' <<<"$info")
+reclamo=$(grep -Eio ".{0,60}(I have (a |an )?(working )?(patch|fix|PR)|I(.| a)?m working on (this|it)|I(.| wi)?ll (open|send|submit) (a )?(PR|pull request)|will open a PR|assign (this |it )?to me|I would like to (work on|take) th).{0,60}" <<<"$cuerpo" | head -3)
+# Y en los comentarios, por si alguien lo reclamó después.
+coment=$(gh api "repos/$repo/issues/$num/comments" --paginate 2>/dev/null | jq -r '.[] | "\(.user.login): \(.body)"' 2>/dev/null \
+  | grep -Eio ".{0,50}(I(.| a)?m working on|I(.| wi)?ll (open|send|submit)|assign (this|it) to me|I would like to (work on|take)).{0,60}" | head -3)
+
 ocupado=""
-[ -n "$enlazados$mencion" ] && ocupado=1
+[ -n "$enlazados$mencion$reclamo$coment" ] && ocupado=1
 
 echo "$([ -n "$ocupado" ] && echo OCUPADO || echo LIBRE)  $repo#$num  ($estado, autor $autor, asignado a $asig)"
 echo "  $titulo"
 [ -n "$enlazados" ] && { echo "  PR enlazados por GitHub:"; echo "$enlazados"; }
 [ -n "$mencion" ]   && { echo "  PR abiertos que mencionan el número:"; echo "$mencion"; }
 [ -n "$suyos" ]     && { echo "  PR abiertos del propio autor del issue (revisar si alguno lo cubre):"; echo "$suyos"; }
-[ -z "$ocupado" ] && echo "  → sin PR abiertos referenciándolo"
+[ -n "$reclamo" ] && { echo "  RECLAMADO en el cuerpo del issue:"; sed 's/^/    · /' <<<"$reclamo"; }
+[ -n "$coment" ] && { echo "  RECLAMADO en los comentarios:"; sed 's/^/    · /' <<<"$coment"; }
+[ -z "$ocupado" ] && echo "  → sin PR abiertos ni reclamo visible"

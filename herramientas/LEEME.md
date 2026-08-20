@@ -73,6 +73,10 @@ tenían cero comentarios y ningún asignado, y un PR abierto encima.
 2. **Búsqueda por número** — PR abiertos que lo mencionan en el texto.
 3. **PR abiertos del autor del issue** — quien reporta suele arreglar.
 
+También lee el cuerpo del issue y sus comentarios buscando un reclamo en prosa. Hace falta:
+`jsonschema#1536` no tenía ningún PR abierto y su autor escribía «I have a working patch and
+tests», esperando el visto bueno del mantenedor antes de enviarlo.
+
 Un `OCUPADO` no siempre significa duplicado: en `scipy#25955` el PR enlazado era del mismo
 autor pero sobre otro archivo y otro bug. Por eso imprime los candidatos en vez de decidir
 solo: hay que abrir y comparar.
